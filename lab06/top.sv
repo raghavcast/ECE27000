@@ -17,7 +17,7 @@ module top (
 );
 
   // Your code goes here...
-  assign ss0[7:0] = pb[7:0];
+  assign ss0[6:0] = pb[6:0];
   
   bargraph u4(.in(pb[15:0]), .out({left[7:0], right[7:0]}));
   
