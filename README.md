@@ -1,4 +1,4 @@
-# ECE27000
+# ECE 27000
 
 This repository holds all the data and code for all the labs for the ECE 270000 course during the Spring 2022 semester. 
 
