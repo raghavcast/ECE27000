@@ -69,6 +69,8 @@ Once you have enabled the power supply from your respective device, the LED shou
 
 If, for some reason, you omit the resistor, the LED will be extremely bright and get warm. The AD2 power supply may notice excessive current flow and automatically turn off. Even if you did wire the LED and resistor correctly, you might want to test the current limiting feature of the power supply. Enable the power supply and connect a wire between the red and blue rails of the breadboard power strips.
 
+> **Demonstrate this procedure to your TA to recieve points for Step 1.**
+
 ## Step 2: Push Button and Pull-Down Resistor Wiring
 Insert the two 12mm push buttons into your board, along with the 10KΩ pull-down resistors, as as shown in Figure 3. Connect the upper left pin of each button to the +3.3 VDC power supply (red) rail. Place a 10KΩ – or larger – resistor between the upper right pin of button and the ground (blue) rail.
 
@@ -80,6 +82,8 @@ When using the push buttons, you should know that the upper left and lower left 
 </p>
 
 In Waveforms, select the "Voltmeter" tool to measure the voltage output. You will notice that there are two channels: channel 1(1+) and channel 2(2+). You can choose either channel to measure the voltage on the resistor connected to the button. Ensure that the channel's negative pin (1- or 2- depending on the channel you choose) is connected to the ground(blue) rail of the breadboard.
+
+>Test each button with the voltmeter on your AD2 to make sure that the voltage on the resistor connected to the button normally measures “0.0 volts” with respect to ground, and measures (approximately) “3.3 volts” when the button is pressed. **Demonstrate this to your TA to receive points for Step 2.**
 
 ## Step 3: Inverter and LED Test
 You are now ready to demonstrate the functionality of some common logic functions. Locate a 74HC04 (hex inverter) integrated circuit in your DK-2 parts kit.
@@ -102,6 +106,8 @@ Connect the 74HC04 to power (pin 14) and ground (pin 7). Connect one of the inpu
   <img src="https://user-images.githubusercontent.com/37441514/156125268-dc83e82c-5aa6-4247-8402-167fd5dc58d3.png" alt="inverted LED with push button" width=600> <br>
   <b>Figure 6: Push button, inverter, and LED</b>
 </p>  
+
+> To your TA, demonstrate that when an LED connected to the input gate (pin 1) of the inverter is on, an LED connected to the corresponding output gate (pin 2) of the inverter will be off, and vice-versa. **Proving the functionality of your inverter will allow you to receive points for Step 3.**
 
 ## Step 4: Wire and verify NAND, NOR, AND, and XOR Gates
 At this point, you may disconnect the inverter if you wish - it will not be tested since its functionality is very simple. Repeat Step (3), using a 74HC00 (quad 2-input NAND), 74HC02 (quad 2-input NOR), 74HC08 (quad 2-input AND), and 74HC86 (quad 2-input XOR). Read the <a href="https://engineering.purdue.edu/ece270/refs/">datasheets</a> on the ECE 270 web site’s reference page carefully to find out the function of each of the pins of each integrated circuit. You will need to connect both push buttons to make this work (you can simply attach another wire to the output of the pushbutton you used earlier as one of them). One push button will represent the X input and the other will represent the Y input. Connect each of the corresponding outputs through a series resistor(about 150Ω again) to the anode of an LED(green or yellow) and connect the cathode of the LED to ground. See Figure 7 for an example of how to wire the breadboard. **Note: You are expected to use the datasheets for each IC to build your circuit. Do not try to copy and paste the example wiring or you will run into issues. The figure below should be used for reference only.**
@@ -146,6 +152,8 @@ Double-click on the AutoLab shortcut on your desktop. (It should appear after yo
   <b>Figure 9: AutoLab window</b>
 </p>
 
+> When you have recorded and verified the values for the truth tables, ask a TA to review your circuit to ensure that your gates are producing the correct outputs for different combinations of button presses. Show your TA that your circuit was validated by AutoLab. **A circuit with correct outputs will earn you points for Step 4.**
+
 ## Step 5: Schematic Capture
 Draw a complete schematic of the circuit you implemented for Step (4) using the Eeschema circuit schematic tool. This schematic should include all four gates tested, a resistor and LED for each gate tested, and two push buttons (with pull-down resistors). Your completed schematic should look similar to Figure 10.
 
@@ -169,6 +177,8 @@ Some hints:
 - To drag components around, put your cursor over the component, press **G**, move your mouse, and click to release.
 - To remove a component, put your cursor over the component, press the **Delete** key, or right click to delete.
 - **Connections are easier to make when all wires are perfectly horizontal and vertical. You will lose points if your schematic is not neatly drawn.**
+
+> When you finish the schematic, zoom in so that your schematic is as big as possible on your screen, and **show it to your TA to receive points for Step 5**. Then, save the schematic file somewhere on your computer (ask your TA if you need assistance) and submit it in the post-lab submission.
 
 ## Step 6: Clear your lab station
 **These instructions must be followed at the end of every lab session to receive a non-zero lab score.**
