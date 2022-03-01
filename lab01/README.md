@@ -87,19 +87,19 @@ You are now ready to demonstrate the functionality of some common logic function
 Normally, such integrated circuits have leads that angle outward from the black package, so they do not naturally fit into the holes like the one on the left side of Figure 4. The first time you use one, you should gently bend the leads on each side by pressing it against a flat surface – such as a table. Visually observe the pins to see if they are straight and that the rows are 0.3 inches apart (like the one on the right in Figure 4). Find the notch on the package that indicates the orientation (as shown in Figure 5). Insert the 74HC04 into the breadboard with the notch on the left side. When the notch is on the left side, pin 1 is the lower left, pin 7 is on the lower right, and pin 14 is on the upper left.
 
 <p align=center>
-  <img src="https://user-images.githubusercontent.com/37441514/156124944-4f58d278-80d0-4608-a36d-0cbed4e26edb.png" alt="pin angles on DIP" width=700> <br>
+  <img src="https://user-images.githubusercontent.com/37441514/156124944-4f58d278-80d0-4608-a36d-0cbed4e26edb.png" alt="pin angles on DIP" width=600> <br>
   <b>Figure 4: Pin angles</b>
 </p>
 
 <p align=center>
-  <img src="https://user-images.githubusercontent.com/37441514/156125083-0449d04b-6e98-4fa3-b267-0d5e8e74f99b.png" alt="notch position on DIP" width=700> <br>
+  <img src="https://user-images.githubusercontent.com/37441514/156125083-0449d04b-6e98-4fa3-b267-0d5e8e74f99b.png" alt="notch position on DIP" width=600> <br>
   <b>Figure 5: Position of notch on left side of the chip</b>
 </p>  
 
 Connect the 74HC04 to power (pin 14) and ground (pin 7). Connect one of the inputs (pin 1) to one of the push button, and connect the corresponding output (pin 2) through a series resistor (about 150Ω again) to the anode of a green LED (connect the cathode of the LED to ground). Verify that the inverter works as anticipated. An illustration of what your board should look like at this point is shown in Figure 6. Notice that the LED on the output of the inverter should be illuminated as long as the button is not pushed.
 
 <p align=center>
-  <img src="https://user-images.githubusercontent.com/37441514/156125268-dc83e82c-5aa6-4247-8402-167fd5dc58d3.png" alt="inverted LED with push button" width=700> <br>
+  <img src="https://user-images.githubusercontent.com/37441514/156125268-dc83e82c-5aa6-4247-8402-167fd5dc58d3.png" alt="inverted LED with push button" width=600> <br>
   <b>Figure 6: Push button, inverter, and LED</b>
 </p>  
 
@@ -107,7 +107,7 @@ Connect the 74HC04 to power (pin 14) and ground (pin 7). Connect one of the inpu
 At this point, you may disconnect the inverter if you wish - it will not be tested since its functionality is very simple. Repeat Step (3), using a 74HC00 (quad 2-input NAND), 74HC02 (quad 2-input NOR), 74HC08 (quad 2-input AND), and 74HC86 (quad 2-input XOR). Read the <a href="https://engineering.purdue.edu/ece270/refs/">datasheets</a> on the ECE 270 web site’s reference page carefully to find out the function of each of the pins of each integrated circuit. You will need to connect both push buttons to make this work (you can simply attach another wire to the output of the pushbutton you used earlier as one of them). One push button will represent the X input and the other will represent the Y input. Connect each of the corresponding outputs through a series resistor(about 150Ω again) to the anode of an LED(green or yellow) and connect the cathode of the LED to ground. See Figure 7 for an example of how to wire the breadboard. **Note: You are expected to use the datasheets for each IC to build your circuit. Do not try to copy and paste the example wiring or you will run into issues. The figure below should be used for reference only.**
 
 <p align=center>
-  <img src="https://user-images.githubusercontent.com/37441514/156125550-22b255ea-a4dd-4c24-88a5-d53aa2fc86fa.png" alt="example wiring, step 4" width=700> <br>
+  <img src="https://user-images.githubusercontent.com/37441514/156125550-22b255ea-a4dd-4c24-88a5-d53aa2fc86fa.png" alt="example wiring, step 4" width=600> <br>
   <b>Figure 7: Example wiring for Step 4</b>
 </p>  
 
@@ -119,4 +119,62 @@ This involves making additional connections from your AD2 to your circuit at spe
 
 **Before you do this, make sure to close WaveForms beforehand.**
 
-To use AutoLab, first download the testbench for the lab ([Labtestfile downloaded](lab1.win.labtest))
+To use AutoLab, first download the testbench for the lab ([Labtestfile downloaded](lab1.win.labtest) on the repository)
+
+Make the following additional connections on your circuit:
+
+Connect the X and Y inputs for each gate to DIO0 and DIO1.
+
+- The NAND gate output should be connected to DIO15.
+- The NOR gate output should be connected to DIO14.
+- The AND gate output should be connected to DIO13.
+- The XOR gate output should be connected to DIO12.
+
+For example, if you are following the wiring shown in the picture, you may plug DIO0 in to the right side of the push button for the X input.
+
+So long as you do not press the buttons, these connections can coexist with your existing circuitry. Figure 8, below, shows an example of the AD2 wired to the circuit using the *flywire* extension. You may use the breadboard adapter instead. It will not affect the test outcome.
+
+<p align=center>
+  <img src="https://user-images.githubusercontent.com/37441514/156126598-f0bf5580-ff22-4a69-9cc6-3d7c104b791a.png" alt="AD2 wiring" width=600> <br>
+  <b>Figure 8: AD2 wiring for Step 5</b>
+</p>
+
+Double-click on the AutoLab shortcut on your desktop. (It should appear after you re-ran the ece270-setup command when you entered the lab). The window should look like the one below. Enter your username, detect your AD2, load the testbench you just downloaded, and click Run Testbench after verifying your connections once again.
+
+<p align=center>
+  <img src="https://user-images.githubusercontent.com/37441514/156126854-75ea961e-bcc7-4bf4-9c85-9e64c55b4381.png" alt="autolab window" width=600> <br>
+  <b>Figure 9: AutoLab window</b>
+</p>
+
+## Step 5: Schematic Capture
+Draw a complete schematic of the circuit you implemented for Step (4) using the Eeschema circuit schematic tool. This schematic should include all four gates tested, a resistor and LED for each gate tested, and two push buttons (with pull-down resistors). Your completed schematic should look similar to Figure 10.
+
+<p align=center>
+  <img src="https://user-images.githubusercontent.com/37441514/156127174-f465bf04-5818-4afa-a747-8da5616ad867.png" alt="schematic example, step 5" width=600> <br>
+  <b>Figure 10: Example of the schematic for circuit used in Step 5.</b>
+</p>
+
+To open Eeschema, move your cursor to the Applications menu on top of your screen, and type in Eeschema. On first launch, you'll be asked to configure the global symbol library table - just use the recommended option to use the default one.
+
+Some hints:
+
+- Pressing **A** anywhere on the schematic will give you a list of components that you can add to the circuit view. You can also get the same menu by clicking the "Draw" option on the top menu.
+- To draw wires, press **W** anywhere on the schematic to change to wire mode. Click once to set a point, move your mouse to the second point, and click again to set it and affix the wire.
+- The AND gate in your kit is a 74HC08, which does not appear in Eeschema's symbol table. Use the 74LS08 instead.
+- Ensure that all components are labeled with their respective names and/or values by pressing **E** with your mouse over the value to change it.
+- To duplicate a component, hover over the component with your cursor and press **C**/right-click and press Duplicate.
+- You may need to rotate some components, such as resistors. When you are adding a component attached to your cursor, or if your cursor is hovering over an existing component, press **R** to rotate it.
+- Some components may have additional labels not shown in the example above. To clear those, edit the component value to contain only a space so that it appears blank.
+- Be careful while making connections - if you see a **green dot** where two wires intersect, it means they're connected. Ensure that you're making any connections that aren't indicated in the example schematic by comparing the large green dots.
+- To drag components around, put your cursor over the component, press **G**, move your mouse, and click to release.
+- To remove a component, put your cursor over the component, press the **Delete** key, or right click to delete.
+- **Connections are easier to make when all wires are perfectly horizontal and vertical. You will lose points if your schematic is not neatly drawn.**
+
+## Step 6: Clear your lab station
+**These instructions must be followed at the end of every lab session to receive a non-zero lab score.**
+
+- Log out of your lab station.
+- Ensure that your station workbench is clean for the next student.
+
+**Show your cleared workspace to a TA to confirm completion of this step before you leave.**
+
