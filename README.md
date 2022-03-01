@@ -25,7 +25,7 @@ An introduction to digital system design, with an emphasis on practical design t
 ### Other stuff 
 - Folder containing all the [lecture slides](Lectures)
 - Folder conatining [Practice problems](Practice%20problems)
-- [Textbook](textbook.pdf) for the course
+- [Textbook](Course%20Textbook.pdf) for the course
 - [Course syllabus](270%20Syllabus.pdf)
 - [autolab](autolab.exe) executable
 
