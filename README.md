@@ -14,13 +14,13 @@ An introduction to digital system design, with an emphasis on practical design t
 6. [Simple Designs in Verilog](labs/lab06)
 
 ### List of homeworks
-1. [Homework 1, week 2](homeworks/hw1)
-2. [Homework 2, week 3](homeworks/hw2)
-3. [Homework 3, week 4](homeworks/hw3)
-4. [Homework 4, week 5](homeworks/hw4)
-5. [Homework 5, week 6](homeworks/hw5)
-6. [Homework 6, week 7](homeworks/hw6)
-7. [Homework 7, week 8](homeworks/hw7)
+1. [Homework 1](homeworks/hw1), week 2
+2. [Homework 2](homeworks/hw2), week 3
+3. [Homework 3](homeworks/hw3), week 4
+4. [Homework 4](homeworks/hw4), week 5
+5. [Homework 5](homeworks/hw5), week 6
+6. [Homework 6](homeworks/hw6), week 7
+7. [Homework 7](homeworks/hw7), week 8
 
 ### Other stuff 
 - Folder containing all the [lecture slides](Lectures)
