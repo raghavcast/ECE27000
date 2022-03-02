@@ -35,3 +35,6 @@ An introduction to digital system design, with an emphasis on practical design t
 - Complete the remaining README's to each lab from the website
 - Create a Lab 0 folder just for the README?
 - Come up with more things to do
+
+### References
+[ECE270](https://github.com/codery12321/ECE270) Repo by [@codery12321](https://github.com/codery12321)
