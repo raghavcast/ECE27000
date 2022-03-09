@@ -1,0 +1,119 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Thu Sep 16 03:45:32 2021
+[*]
+[dumpfile] "lab04.vcd"
+[savefile] "addwave.gtkw"
+[timestart] 0
+[size] 1048 925
+[pos] 25 -27
+*-6.651312 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 256
+[signals_width] 158
+[sst_expanded] 1
+[sst_vpaned_height] 255
+@821
+[color] 2
+lab_testbench.testname[1023:0]
+@800022
+lab_testbench.top_inst.left[7:0]
+@28
+(0)lab_testbench.top_inst.left[7:0]
+(1)lab_testbench.top_inst.left[7:0]
+(2)lab_testbench.top_inst.left[7:0]
+(3)lab_testbench.top_inst.left[7:0]
+(4)lab_testbench.top_inst.left[7:0]
+(5)lab_testbench.top_inst.left[7:0]
+(6)lab_testbench.top_inst.left[7:0]
+(7)lab_testbench.top_inst.left[7:0]
+@1001200
+-group_end
+@800022
+lab_testbench.top_inst.right[7:0]
+@28
+(0)lab_testbench.top_inst.right[7:0]
+(1)lab_testbench.top_inst.right[7:0]
+(2)lab_testbench.top_inst.right[7:0]
+(3)lab_testbench.top_inst.right[7:0]
+(4)lab_testbench.top_inst.right[7:0]
+(5)lab_testbench.top_inst.right[7:0]
+(6)lab_testbench.top_inst.right[7:0]
+(7)lab_testbench.top_inst.right[7:0]
+@1001200
+-group_end
+@800022
+lab_testbench.top_inst.ss0[7:0]
+@28
+(0)lab_testbench.top_inst.ss0[7:0]
+@1001200
+-group_end
+@800022
+lab_testbench.top_inst.ss1[7:0]
+@28
+(0)lab_testbench.top_inst.ss1[7:0]
+@1001200
+-group_end
+@800022
+lab_testbench.top_inst.ss2[7:0]
+@28
+(0)lab_testbench.top_inst.ss2[7:0]
+@1001200
+-group_end
+@800022
+lab_testbench.top_inst.ss3[7:0]
+@28
+(0)lab_testbench.top_inst.ss3[7:0]
+@1001200
+-group_end
+@800022
+lab_testbench.top_inst.ss4[7:0]
+@28
+(0)lab_testbench.top_inst.ss4[7:0]
+@1001200
+-group_end
+@800022
+lab_testbench.top_inst.ss5[7:0]
+@28
+(0)lab_testbench.top_inst.ss5[7:0]
+@1001200
+-group_end
+@800022
+lab_testbench.top_inst.ss6[7:0]
+@28
+(0)lab_testbench.top_inst.ss6[7:0]
+@1001200
+-group_end
+@800022
+lab_testbench.top_inst.ss7[7:0]
+@28
+(0)lab_testbench.top_inst.ss7[7:0]
+@1001200
+-group_end
+@800022
+lab_testbench.top_inst.pb[20:0]
+@28
+(0)lab_testbench.top_inst.pb[20:0]
+(1)lab_testbench.top_inst.pb[20:0]
+(2)lab_testbench.top_inst.pb[20:0]
+(3)lab_testbench.top_inst.pb[20:0]
+(4)lab_testbench.top_inst.pb[20:0]
+(5)lab_testbench.top_inst.pb[20:0]
+(6)lab_testbench.top_inst.pb[20:0]
+(7)lab_testbench.top_inst.pb[20:0]
+(8)lab_testbench.top_inst.pb[20:0]
+(9)lab_testbench.top_inst.pb[20:0]
+(10)lab_testbench.top_inst.pb[20:0]
+(11)lab_testbench.top_inst.pb[20:0]
+(12)lab_testbench.top_inst.pb[20:0]
+(13)lab_testbench.top_inst.pb[20:0]
+(14)lab_testbench.top_inst.pb[20:0]
+(15)lab_testbench.top_inst.pb[20:0]
+(16)lab_testbench.top_inst.pb[20:0]
+(17)lab_testbench.top_inst.pb[20:0]
+(18)lab_testbench.top_inst.pb[20:0]
+(19)lab_testbench.top_inst.pb[20:0]
+(20)lab_testbench.top_inst.pb[20:0]
+@1001200
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0
