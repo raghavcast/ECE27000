@@ -234,5 +234,79 @@ Once you have determined that your circuit works correctly, attach the AD2 in th
 - connect AD2 DIO[5:4] to multiplexer inputs S[1:0], respectively
 - connect AD2 DIO6 to multiplexer output Y
 
-Use the [Autolab application]() and the testbench to check your wiring and produce a completion code.
+Use the [Autolab application](lab8.win.labtest) and the testbench to check your wiring and produce a completion code.
 
+> **Once you produce a completion code, make sure to submit it before your lab section in your prelab submission.**
+
+## Step 1: Implement a seven-segment decoder submodule in Verilog
+
+Run the ece270-setup command again by double-clicking the shortcut on your desktop. 
+A lab08 folder should now be added to the ece270 folder in your home directory. 
+Inside it, open top.sv, and write a new module below the top module with the following specifications:
+
+**From your prelab, copy the prienc16to4 module to your top.sv file, as you will use it to simplify testing for your ssdec module.**
+
+- Module name: ssdec
+- Module instance name: sd
+    - **This is very important! The module and instance names must match!**
+- Module ports:
+    - **in**: 4-bit input port
+    - **enable**: 1-bit input port
+    - **out**: 7-bit output port
+- Top module instance connections:
+    - **in**: Connected to pb[3:0]
+    - **enable**: Connected to 1'b1
+    - **out**: Connected to ss0[6:0]
+
+The module instance must start with:
+
+```
+ssdec sd (...
+```
+
+Follow the development shown [here](https://engineering.purdue.edu/ece270/lab/lab8/sssdec.pdf) on how to build a seven-segment display decoder. 
+This module has four data inputs and a 7-bit output. 
+It configures the outputs so that a four bit binary value is displayed as a hexadecimal digit on a 7-segment display. 
+The third port, enable, determines if any of the outputs are asserted. If enable is not asserted, the output should remain off. 
+This is a convenient way to turn off the entire digit if needed.
+
+The 7-bit output, when connected to one of ss0, ss1... ss6 or ss7 must look like this for the corresponding value of the input:
+
+     _         _    _         _    _    _    _    _    _         _         _    _ 
+    | |    |   _|   _|  |_|  |_   |_     |  |_|  |_|  |_|  |_   |     _|  |_   |_  
+    |_|    |  |_    _|    |   _|  |_|    |  |_|    |  | |  |_|  |_   |_|  |_   |   
+     
+Once you have written the submodule and instantiated it in the top module with the connections as explained above, test your design. 
+Run "make cram" as you did for lab 4, correct any errors, and observe the behavior on the FPGA. 
+Press any of the push buttons from 'F' – '0'. 
+You should see the corresponding hexadecimal digit on the rightmost seven-segment display.
+
+Once that you have verified that your design is working for all combinations of pb[3:0], you can connect the input of your ssdec to the output of the priority encoder you wrote for your prelab (prienc16to4). 
+Also connect the ssdec enable port to the strobe output of the decoder. 
+(If you're confused about how to connect the ports of two separate instances, recall how to use an intermediate signal/bus to connect the ports). 
+This will allow us to simply press one button (0 through F) to see the digit on the display.
+
+> **Demonstrate your new ssdec module to your TA to get checked off. Show that pressing 0 shows 0 on ss0, 1 shows 1, 2 shows 2, and so on.**
+
+## Step 2: Verify your seven-segment decoder submodule in GTKwave
+
+Verifying your ssdec module is crucial because you will use it in nearly every lab from here on out. 
+To ensure it meets our expectations, we will run it against a testbench to check if it functions correctly.
+
+In Kate, if it doesn't exist already, add the "make verify" target to your Build output tab, and execute it. 
+If you have no errors, a trace waveform should appear, similar to the one below:
+
+<p align=center>
+    <img src="https://user-images.githubusercontent.com/37441514/157537814-5faf025d-670e-4fad-90a6-ef2f65e3e035.png" alt="verify waveforms" width=600>
+</p>
+
+The first half of the testbench checks that the enable of your ssdec is functioning properly - the output should be low when the enable is also low, regardless of the changing input "in". 
+The second half turns on that enable port, and then cycles through the input between 0 and 15, which produces the respective seven-segment code accordingly.
+
+> **Once you have verified your ssdec module and shown it to your TA, save it in your postlab submission.**
+
+## Step 3: Clean up and log out
+
+After logging out, make sure to take everything you brought with you on your way out. 
+Notify a TA as you are leaving to ensure that you do not lose points on the lab. 
+**Please do not restart the lab machine. If you are having trouble logging out, do not leave until you have notified a TA of your issue to avoid losing points on the lab.**
