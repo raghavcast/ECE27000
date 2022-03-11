@@ -1,0 +1,38 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Fri Oct  1 00:42:47 2021
+[*]
+[dumpfile] "lab08.vcd"
+[dumpfile_mtime] "Fri Oct  1 00:35:23 2021"
+[dumpfile_size] 1970
+[savefile] "addwave.gtkw"
+[timestart] 0
+[size] 1095 887
+[pos] 309 16
+*-6.737812 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] lab_testbench.
+[sst_width] 228
+[signals_width] 158
+[sst_expanded] 1
+[sst_vpaned_height] 241
+@820
+[color] 2
+lab_testbench.testname[1023:0]
+@22
+lab_testbench.sd.in[3:0]
+@28
+lab_testbench.sd.enable
+@800023
+lab_testbench.sd.out[6:0]
+@29
+(0)lab_testbench.sd.out[6:0]
+(1)lab_testbench.sd.out[6:0]
+(2)lab_testbench.sd.out[6:0]
+(3)lab_testbench.sd.out[6:0]
+(4)lab_testbench.sd.out[6:0]
+(5)lab_testbench.sd.out[6:0]
+(6)lab_testbench.sd.out[6:0]
+@1001201
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0
