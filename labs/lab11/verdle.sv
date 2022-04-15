@@ -9,7 +9,7 @@ module top (
          ss7, ss6, ss5, ss4, ss3, ss2, ss1, ss0,
   output logic red, green, blue,
 
-  // UART ports
+  // Ports from/to UART
   output logic [7:0] txdata,
   input  logic [7:0] rxdata,
   output logic txclk, rxclk,
@@ -17,34 +17,17 @@ module top (
 );
 
   // Your code goes here...
-  //fr_counter frc (.clk(hz100), .rst(reset), .enable(pb[0]), .out(right));
-  
-  //wordcmp wcmp (.guessed("desert"), .selected("design"), .in_word(right[5:0]), .in_place(left[5:0]));
-  
-  /*printer prn (
-  .clk(hz100), .rst(reset), // clock and async reset for flip-flops
-  .num(pb[2:0]),            // select the message
-  .activate(pb[3]),         // when high, start printing and ignore until finished printing
-  .txready(txready),        // let us know when ready to transmit
-  .char_in("a"),            // for repeating characters entered by user (we'll just use the character 'a' for now)
-  .txclk(txclk),            // UART "clock"
-  .txdata(txdata),          // UART data out
-  .done_printing(green)     // indicate when done
-  );*/
   
   verdle v (
-        .clk(hz100), .rst(reset),
-        .txready(txready), .rxready(rxready),
-        .txclk(txclk), .rxclk(rxclk), 
-        .rxdata(rxdata),
-        .txdata(txdata),
-        .ssout({ss7, ss6, ss5, ss4, ss3, ss2, ss1, ss0})
-      );
-  
-  //ssdisplay ssd (.in_place(pb[5:0]), .in_word(pb[13:8]), .ssout({ss7, ss6, ss5, ss4, ss3, ss2, ss1, ss0}));
+    .clk(hz100), .rst(reset),
+    .txready(txready), .rxready(rxready),
+    .txclk(txclk), .rxclk(rxclk), 
+    .rxdata(rxdata),
+    .txdata(txdata),
+    .ssout({ss7, ss6, ss5, ss4, ss3, ss2, ss1, ss0})
+  );
 endmodule
 
-// Add more modules down here...
 module fr_counter (
   input logic clk,
   input logic rst,
