@@ -59,7 +59,7 @@ module fa (
   output reg co
 );
 
-  always @(*)
+  always_comb
     case ({a, b, ci}) 
       3'b000: {co, s} = 2'b00;
       3'b001: {co, s} = 2'b01;
@@ -69,6 +69,7 @@ module fa (
       3'b101: {co, s} = 2'b10;
       3'b110: {co, s} = 2'b10;
       3'b111: {co, s} = 2'b11;
+      default: {co, s} = 2'b00;
     endcase
 endmodule
 
@@ -120,7 +121,7 @@ module bcd9comp1 (
   output reg [3:0] out
 );
   
-  always @ (*) 
+  always_comb 
     case (in)
       4'b0000: out = 4'b1001;
       4'b0001: out = 4'b1000;
@@ -132,6 +133,7 @@ module bcd9comp1 (
       4'b0111: out = 4'b0010;
       4'b1000: out = 4'b0001;
       4'b1001: out = 4'b0000;
+      default: out = 4'b0000;
     endcase
 endmodule
 

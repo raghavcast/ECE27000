@@ -1,0 +1,73 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Sat Oct 23 22:42:35 2021
+[*] NM
+[*]
+[dumpfile] "lab12.vcd"
+[dumpfile_mtime] "Sat Oct 23 22:40:41 2021"
+[dumpfile_size] 13930
+[savefile] "addwave.gtkw"
+[timestart] 0
+[size] 1826 996
+[pos] -1 -1
+*-5.996021 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] lab_testbench.
+[sst_width] 214
+[signals_width] 158
+[sst_expanded] 1
+[sst_vpaned_height] 294
+@820
+[color] 2
+lab_testbench.testname[1023:0]
+@200
+-
+@29
+[color] 4
+lab_testbench.c8_1.clk
+[color] 4
+lab_testbench.c8_1.DIR
+[color] 4
+lab_testbench.c8_1.enable
+@800024
+lab_testbench.c8_1.MAX[7:0]
+@28
+(0)lab_testbench.c8_1.MAX[7:0]
+(1)lab_testbench.c8_1.MAX[7:0]
+(2)lab_testbench.c8_1.MAX[7:0]
+(3)lab_testbench.c8_1.MAX[7:0]
+(4)lab_testbench.c8_1.MAX[7:0]
+(5)lab_testbench.c8_1.MAX[7:0]
+(6)lab_testbench.c8_1.MAX[7:0]
+(7)lab_testbench.c8_1.MAX[7:0]
+@1001200
+-group_end
+@800024
+lab_testbench.c8_1.Q[7:0]
+@28
+(0)lab_testbench.c8_1.Q[7:0]
+(1)lab_testbench.c8_1.Q[7:0]
+(2)lab_testbench.c8_1.Q[7:0]
+(3)lab_testbench.c8_1.Q[7:0]
+(4)lab_testbench.c8_1.Q[7:0]
+(5)lab_testbench.c8_1.Q[7:0]
+(6)lab_testbench.c8_1.Q[7:0]
+(7)lab_testbench.c8_1.Q[7:0]
+@1001200
+-group_end
+@28
+lab_testbench.c8_1.rst
+@800024
+lab_testbench.c8_1.next_Q[7:0]
+@28
+(0)lab_testbench.c8_1.next_Q[7:0]
+(1)lab_testbench.c8_1.next_Q[7:0]
+(2)lab_testbench.c8_1.next_Q[7:0]
+(3)lab_testbench.c8_1.next_Q[7:0]
+(4)lab_testbench.c8_1.next_Q[7:0]
+(5)lab_testbench.c8_1.next_Q[7:0]
+(6)lab_testbench.c8_1.next_Q[7:0]
+(7)lab_testbench.c8_1.next_Q[7:0]
+@1001200
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0

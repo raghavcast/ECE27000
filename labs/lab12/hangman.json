@@ -1,0 +1,8049 @@
+{
+  "creator": "Niraj Menon with Yosys 0.9+932 (git sha1 3c6a566d, gcc 6.3.0-18+deb9u1 -fPIC -Os)",
+  "modules": {
+    "ICESTORM_LC": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:813"
+      },
+      "ports": {
+        "I0": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "I1": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "I2": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "I3": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "CIN": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "CLK": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "CEN": {
+          "direction": "input",
+          "bits": [ 8 ]
+        },
+        "SR": {
+          "direction": "input",
+          "bits": [ 9 ]
+        },
+        "LO": {
+          "direction": "output",
+          "bits": [ 10 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 11 ]
+        },
+        "COUT": {
+          "direction": "output",
+          "bits": [ 12 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "CEN": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "cells_sim.v:814"
+          }
+        },
+        "CIN": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:814"
+          }
+        },
+        "CLK": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "cells_sim.v:814"
+          }
+        },
+        "COUT": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "cells_sim.v:820"
+          }
+        },
+        "I0": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:814"
+          }
+        },
+        "I1": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:814"
+          }
+        },
+        "I2": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:814"
+          }
+        },
+        "I3": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:814"
+          }
+        },
+        "LO": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "cells_sim.v:815"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:819"
+          }
+        },
+        "SR": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "cells_sim.v:814"
+          }
+        }
+      }
+    },
+    "SB_CARRY": {
+      "attributes": {
+        "whitebox": 1,
+        "src": "cells_sim.v:144"
+      },
+      "ports": {
+        "CO": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "I0": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "I1": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "CI": {
+          "direction": "input",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+        "$logic_and$cells_sim.v:145$124": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "cells_sim.v:145"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 4 ],
+            "Y": [ 6 ]
+          }
+        },
+        "$logic_and$cells_sim.v:145$126": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "cells_sim.v:145"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 5 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$logic_or$cells_sim.v:145$125": {
+          "hide_name": 1,
+          "type": "$logic_or",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "cells_sim.v:145"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 3 ],
+            "B": [ 4 ],
+            "Y": [ 7 ]
+          }
+        },
+        "$logic_or$cells_sim.v:145$127": {
+          "hide_name": 1,
+          "type": "$logic_or",
+          "parameters": {
+            "A_SIGNED": 0,
+            "A_WIDTH": 1,
+            "B_SIGNED": 0,
+            "B_WIDTH": 1,
+            "Y_WIDTH": 1
+          },
+          "attributes": {
+            "src": "cells_sim.v:145"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 8 ],
+            "Y": [ 2 ]
+          }
+        }
+      },
+      "netnames": {
+        "$logic_and$cells_sim.v:145$124_Y": {
+          "hide_name": 1,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:145"
+          }
+        },
+        "$logic_and$cells_sim.v:145$126_Y": {
+          "hide_name": 1,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "cells_sim.v:145"
+          }
+        },
+        "$logic_or$cells_sim.v:145$125_Y": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "cells_sim.v:145"
+          }
+        },
+        "$logic_or$cells_sim.v:145$127_Y": {
+          "hide_name": 1,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:145"
+          }
+        },
+        "CI": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:144"
+          }
+        },
+        "CO": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:144"
+          }
+        },
+        "I0": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:144"
+          }
+        },
+        "I1": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:144"
+          }
+        }
+      }
+    },
+    "SB_DFF": {
+      "attributes": {
+        "blackbox": 1,
+        "src": "cells_sim.v:154"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 4 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:159"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:159"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:158"
+          }
+        }
+      }
+    },
+    "SB_DFFE": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:165"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "E": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:170"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:170"
+          }
+        },
+        "E": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:170"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:169"
+          }
+        }
+      }
+    },
+    "SB_DFFER": {
+      "attributes": {
+        "blackbox": 1,
+        "src": "cells_sim.v:249"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "E": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "R": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:254"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:254"
+          }
+        },
+        "E": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:254"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:253"
+          }
+        },
+        "R": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:254"
+          }
+        }
+      }
+    },
+    "SB_DFFES": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:279"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "E": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "S": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:284"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:284"
+          }
+        },
+        "E": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:284"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:283"
+          }
+        },
+        "S": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:284"
+          }
+        }
+      }
+    },
+    "SB_DFFESR": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:233"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "E": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "R": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:238"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:238"
+          }
+        },
+        "E": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:238"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:237"
+          }
+        },
+        "R": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:238"
+          }
+        }
+      }
+    },
+    "SB_DFFESS": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:263"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "E": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "S": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:268"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:268"
+          }
+        },
+        "E": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:268"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:267"
+          }
+        },
+        "S": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:268"
+          }
+        }
+      }
+    },
+    "SB_DFFN": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:295"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 4 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:300"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:300"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:299"
+          }
+        }
+      }
+    },
+    "SB_DFFNE": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:306"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "E": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:311"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:311"
+          }
+        },
+        "E": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:311"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:310"
+          }
+        }
+      }
+    },
+    "SB_DFFNER": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:390"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "E": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "R": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:395"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:395"
+          }
+        },
+        "E": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:395"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:394"
+          }
+        },
+        "R": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:395"
+          }
+        }
+      }
+    },
+    "SB_DFFNES": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:420"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "E": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "S": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:425"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:425"
+          }
+        },
+        "E": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:425"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:424"
+          }
+        },
+        "S": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:425"
+          }
+        }
+      }
+    },
+    "SB_DFFNESR": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:374"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "E": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "R": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:379"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:379"
+          }
+        },
+        "E": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:379"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:378"
+          }
+        },
+        "R": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:379"
+          }
+        }
+      }
+    },
+    "SB_DFFNESS": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:404"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "E": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "S": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:409"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:409"
+          }
+        },
+        "E": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:409"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:408"
+          }
+        },
+        "S": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:409"
+          }
+        }
+      }
+    },
+    "SB_DFFNR": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:332"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "R": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:337"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:337"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:336"
+          }
+        },
+        "R": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:337"
+          }
+        }
+      }
+    },
+    "SB_DFFNS": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:360"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "S": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:365"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:365"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:364"
+          }
+        },
+        "S": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:365"
+          }
+        }
+      }
+    },
+    "SB_DFFNSR": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:318"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "R": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:323"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:323"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:322"
+          }
+        },
+        "R": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:323"
+          }
+        }
+      }
+    },
+    "SB_DFFNSS": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:346"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "S": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:351"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:351"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:350"
+          }
+        },
+        "S": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:351"
+          }
+        }
+      }
+    },
+    "SB_DFFR": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:191"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "R": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:196"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:196"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:195"
+          }
+        },
+        "R": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:196"
+          }
+        }
+      }
+    },
+    "SB_DFFS": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:219"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "S": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:224"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:224"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:223"
+          }
+        },
+        "S": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:224"
+          }
+        }
+      }
+    },
+    "SB_DFFSR": {
+      "attributes": {
+        "blackbox": 1,
+        "src": "cells_sim.v:177"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "R": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:182"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:182"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:181"
+          }
+        },
+        "R": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:182"
+          }
+        }
+      }
+    },
+    "SB_DFFSS": {
+      "attributes": {
+        "blackbox": 1,
+        "src": "cells_sim.v:205"
+      },
+      "ports": {
+        "Q": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "S": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 5 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "C": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:210"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:210"
+          }
+        },
+        "Q": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_arrival": 540,
+            "src": "cells_sim.v:209"
+          }
+        },
+        "S": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:210"
+          }
+        }
+      }
+    },
+    "SB_FILTER_50NS": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:1271"
+      },
+      "ports": {
+        "FILTERIN": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "FILTEROUT": {
+          "direction": "output",
+          "bits": [ 3 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "FILTERIN": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:1272"
+          }
+        },
+        "FILTEROUT": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:1273"
+          }
+        }
+      }
+    },
+    "SB_GB": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:125"
+      },
+      "ports": {
+        "USER_SIGNAL_TO_GLOBAL_BUFFER": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "GLOBAL_BUFFER_OUTPUT": {
+          "direction": "output",
+          "bits": [ 3 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "GLOBAL_BUFFER_OUTPUT": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:127"
+          }
+        },
+        "USER_SIGNAL_TO_GLOBAL_BUFFER": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:126"
+          }
+        }
+      }
+    },
+    "SB_GB_IO": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:86"
+      },
+      "ports": {
+        "PACKAGE_PIN": {
+          "direction": "inout",
+          "bits": [ 2 ]
+        },
+        "GLOBAL_BUFFER_OUTPUT": {
+          "direction": "output",
+          "bits": [ 3 ]
+        },
+        "LATCH_INPUT_VALUE": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "CLOCK_ENABLE": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "INPUT_CLK": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "OUTPUT_CLK": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "OUTPUT_ENABLE": {
+          "direction": "input",
+          "bits": [ 8 ]
+        },
+        "D_OUT_0": {
+          "direction": "input",
+          "bits": [ 9 ]
+        },
+        "D_OUT_1": {
+          "direction": "input",
+          "bits": [ 10 ]
+        },
+        "D_IN_0": {
+          "direction": "output",
+          "bits": [ 11 ]
+        },
+        "D_IN_1": {
+          "direction": "output",
+          "bits": [ 12 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "CLOCK_ENABLE": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:90"
+          }
+        },
+        "D_IN_0": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "cells_sim.v:96"
+          }
+        },
+        "D_IN_1": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "cells_sim.v:97"
+          }
+        },
+        "D_OUT_0": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "cells_sim.v:94"
+          }
+        },
+        "D_OUT_1": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "cells_sim.v:95"
+          }
+        },
+        "GLOBAL_BUFFER_OUTPUT": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:88"
+          }
+        },
+        "INPUT_CLK": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:91"
+          }
+        },
+        "LATCH_INPUT_VALUE": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:89"
+          }
+        },
+        "OUTPUT_CLK": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "cells_sim.v:92"
+          }
+        },
+        "OUTPUT_ENABLE": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "cells_sim.v:93"
+          }
+        },
+        "PACKAGE_PIN": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:87"
+          }
+        }
+      }
+    },
+    "SB_HFOSC": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:1079"
+      },
+      "ports": {
+        "TRIM0": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "TRIM1": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "TRIM2": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "TRIM3": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "TRIM4": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "TRIM5": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "TRIM6": {
+          "direction": "input",
+          "bits": [ 8 ]
+        },
+        "TRIM7": {
+          "direction": "input",
+          "bits": [ 9 ]
+        },
+        "TRIM8": {
+          "direction": "input",
+          "bits": [ 10 ]
+        },
+        "TRIM9": {
+          "direction": "input",
+          "bits": [ 11 ]
+        },
+        "CLKHFPU": {
+          "direction": "input",
+          "bits": [ 12 ]
+        },
+        "CLKHFEN": {
+          "direction": "input",
+          "bits": [ 13 ]
+        },
+        "CLKHF": {
+          "direction": "output",
+          "bits": [ 14 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "CLKHF": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "cells_sim.v:1092"
+          }
+        },
+        "CLKHFEN": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "cells_sim.v:1091"
+          }
+        },
+        "CLKHFPU": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "cells_sim.v:1090"
+          }
+        },
+        "TRIM0": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:1080"
+          }
+        },
+        "TRIM1": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:1081"
+          }
+        },
+        "TRIM2": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:1082"
+          }
+        },
+        "TRIM3": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:1083"
+          }
+        },
+        "TRIM4": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:1084"
+          }
+        },
+        "TRIM5": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "cells_sim.v:1085"
+          }
+        },
+        "TRIM6": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "cells_sim.v:1086"
+          }
+        },
+        "TRIM7": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "cells_sim.v:1087"
+          }
+        },
+        "TRIM8": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "cells_sim.v:1088"
+          }
+        },
+        "TRIM9": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "cells_sim.v:1089"
+          }
+        }
+      }
+    },
+    "SB_I2C": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:1148"
+      },
+      "ports": {
+        "SBCLKI": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "SBRWI": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "SBSTBI": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "SBADRI7": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "SBADRI6": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "SBADRI5": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "SBADRI4": {
+          "direction": "input",
+          "bits": [ 8 ]
+        },
+        "SBADRI3": {
+          "direction": "input",
+          "bits": [ 9 ]
+        },
+        "SBADRI2": {
+          "direction": "input",
+          "bits": [ 10 ]
+        },
+        "SBADRI1": {
+          "direction": "input",
+          "bits": [ 11 ]
+        },
+        "SBADRI0": {
+          "direction": "input",
+          "bits": [ 12 ]
+        },
+        "SBDATI7": {
+          "direction": "input",
+          "bits": [ 13 ]
+        },
+        "SBDATI6": {
+          "direction": "input",
+          "bits": [ 14 ]
+        },
+        "SBDATI5": {
+          "direction": "input",
+          "bits": [ 15 ]
+        },
+        "SBDATI4": {
+          "direction": "input",
+          "bits": [ 16 ]
+        },
+        "SBDATI3": {
+          "direction": "input",
+          "bits": [ 17 ]
+        },
+        "SBDATI2": {
+          "direction": "input",
+          "bits": [ 18 ]
+        },
+        "SBDATI1": {
+          "direction": "input",
+          "bits": [ 19 ]
+        },
+        "SBDATI0": {
+          "direction": "input",
+          "bits": [ 20 ]
+        },
+        "SCLI": {
+          "direction": "input",
+          "bits": [ 21 ]
+        },
+        "SDAI": {
+          "direction": "input",
+          "bits": [ 22 ]
+        },
+        "SBDATO7": {
+          "direction": "output",
+          "bits": [ 23 ]
+        },
+        "SBDATO6": {
+          "direction": "output",
+          "bits": [ 24 ]
+        },
+        "SBDATO5": {
+          "direction": "output",
+          "bits": [ 25 ]
+        },
+        "SBDATO4": {
+          "direction": "output",
+          "bits": [ 26 ]
+        },
+        "SBDATO3": {
+          "direction": "output",
+          "bits": [ 27 ]
+        },
+        "SBDATO2": {
+          "direction": "output",
+          "bits": [ 28 ]
+        },
+        "SBDATO1": {
+          "direction": "output",
+          "bits": [ 29 ]
+        },
+        "SBDATO0": {
+          "direction": "output",
+          "bits": [ 30 ]
+        },
+        "SBACKO": {
+          "direction": "output",
+          "bits": [ 31 ]
+        },
+        "I2CIRQ": {
+          "direction": "output",
+          "bits": [ 32 ]
+        },
+        "I2CWKUP": {
+          "direction": "output",
+          "bits": [ 33 ]
+        },
+        "SCLO": {
+          "direction": "output",
+          "bits": [ 34 ]
+        },
+        "SCLOE": {
+          "direction": "output",
+          "bits": [ 35 ]
+        },
+        "SDAO": {
+          "direction": "output",
+          "bits": [ 36 ]
+        },
+        "SDAOE": {
+          "direction": "output",
+          "bits": [ 37 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "I2CIRQ": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+            "src": "cells_sim.v:1179"
+          }
+        },
+        "I2CWKUP": {
+          "hide_name": 0,
+          "bits": [ 33 ],
+          "attributes": {
+            "src": "cells_sim.v:1180"
+          }
+        },
+        "SBACKO": {
+          "hide_name": 0,
+          "bits": [ 31 ],
+          "attributes": {
+            "src": "cells_sim.v:1178"
+          }
+        },
+        "SBADRI0": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "cells_sim.v:1159"
+          }
+        },
+        "SBADRI1": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "cells_sim.v:1158"
+          }
+        },
+        "SBADRI2": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "cells_sim.v:1157"
+          }
+        },
+        "SBADRI3": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "cells_sim.v:1156"
+          }
+        },
+        "SBADRI4": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "cells_sim.v:1155"
+          }
+        },
+        "SBADRI5": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "cells_sim.v:1154"
+          }
+        },
+        "SBADRI6": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:1153"
+          }
+        },
+        "SBADRI7": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:1152"
+          }
+        },
+        "SBCLKI": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:1149"
+          }
+        },
+        "SBDATI0": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "cells_sim.v:1167"
+          }
+        },
+        "SBDATI1": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "cells_sim.v:1166"
+          }
+        },
+        "SBDATI2": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "cells_sim.v:1165"
+          }
+        },
+        "SBDATI3": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "cells_sim.v:1164"
+          }
+        },
+        "SBDATI4": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "cells_sim.v:1163"
+          }
+        },
+        "SBDATI5": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "cells_sim.v:1162"
+          }
+        },
+        "SBDATI6": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "cells_sim.v:1161"
+          }
+        },
+        "SBDATI7": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "cells_sim.v:1160"
+          }
+        },
+        "SBDATO0": {
+          "hide_name": 0,
+          "bits": [ 30 ],
+          "attributes": {
+            "src": "cells_sim.v:1177"
+          }
+        },
+        "SBDATO1": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+            "src": "cells_sim.v:1176"
+          }
+        },
+        "SBDATO2": {
+          "hide_name": 0,
+          "bits": [ 28 ],
+          "attributes": {
+            "src": "cells_sim.v:1175"
+          }
+        },
+        "SBDATO3": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "cells_sim.v:1174"
+          }
+        },
+        "SBDATO4": {
+          "hide_name": 0,
+          "bits": [ 26 ],
+          "attributes": {
+            "src": "cells_sim.v:1173"
+          }
+        },
+        "SBDATO5": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "cells_sim.v:1172"
+          }
+        },
+        "SBDATO6": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "cells_sim.v:1171"
+          }
+        },
+        "SBDATO7": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "cells_sim.v:1170"
+          }
+        },
+        "SBRWI": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:1150"
+          }
+        },
+        "SBSTBI": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:1151"
+          }
+        },
+        "SCLI": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "cells_sim.v:1168"
+          }
+        },
+        "SCLO": {
+          "hide_name": 0,
+          "bits": [ 34 ],
+          "attributes": {
+            "src": "cells_sim.v:1181"
+          }
+        },
+        "SCLOE": {
+          "hide_name": 0,
+          "bits": [ 35 ],
+          "attributes": {
+            "src": "cells_sim.v:1182"
+          }
+        },
+        "SDAI": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "cells_sim.v:1169"
+          }
+        },
+        "SDAO": {
+          "hide_name": 0,
+          "bits": [ 36 ],
+          "attributes": {
+            "src": "cells_sim.v:1183"
+          }
+        },
+        "SDAOE": {
+          "hide_name": 0,
+          "bits": [ 37 ],
+          "attributes": {
+            "src": "cells_sim.v:1184"
+          }
+        }
+      }
+    },
+    "SB_IO": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:11"
+      },
+      "ports": {
+        "PACKAGE_PIN": {
+          "direction": "inout",
+          "bits": [ 2 ]
+        },
+        "LATCH_INPUT_VALUE": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "CLOCK_ENABLE": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "INPUT_CLK": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "OUTPUT_CLK": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "OUTPUT_ENABLE": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "D_OUT_0": {
+          "direction": "input",
+          "bits": [ 8 ]
+        },
+        "D_OUT_1": {
+          "direction": "input",
+          "bits": [ 9 ]
+        },
+        "D_IN_0": {
+          "direction": "output",
+          "bits": [ 10 ]
+        },
+        "D_IN_1": {
+          "direction": "output",
+          "bits": [ 11 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "CLOCK_ENABLE": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:14"
+          }
+        },
+        "D_IN_0": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "cells_sim.v:20"
+          }
+        },
+        "D_IN_1": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "cells_sim.v:21"
+          }
+        },
+        "D_OUT_0": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "cells_sim.v:18"
+          }
+        },
+        "D_OUT_1": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "cells_sim.v:19"
+          }
+        },
+        "INPUT_CLK": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:15"
+          }
+        },
+        "LATCH_INPUT_VALUE": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:13"
+          }
+        },
+        "OUTPUT_CLK": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:16"
+          }
+        },
+        "OUTPUT_ENABLE": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "cells_sim.v:17"
+          }
+        },
+        "PACKAGE_PIN": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:12"
+          }
+        }
+      }
+    },
+    "SB_IO_I3C": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:1277"
+      },
+      "ports": {
+        "PACKAGE_PIN": {
+          "direction": "inout",
+          "bits": [ 2 ]
+        },
+        "LATCH_INPUT_VALUE": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "CLOCK_ENABLE": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "INPUT_CLK": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "OUTPUT_CLK": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "OUTPUT_ENABLE": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "D_OUT_0": {
+          "direction": "input",
+          "bits": [ 8 ]
+        },
+        "D_OUT_1": {
+          "direction": "input",
+          "bits": [ 9 ]
+        },
+        "D_IN_0": {
+          "direction": "output",
+          "bits": [ 10 ]
+        },
+        "D_IN_1": {
+          "direction": "output",
+          "bits": [ 11 ]
+        },
+        "PU_ENB": {
+          "direction": "input",
+          "bits": [ 12 ]
+        },
+        "WEAK_PU_ENB": {
+          "direction": "input",
+          "bits": [ 13 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "CLOCK_ENABLE": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:1280"
+          }
+        },
+        "D_IN_0": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "cells_sim.v:1286"
+          }
+        },
+        "D_IN_1": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "cells_sim.v:1287"
+          }
+        },
+        "D_OUT_0": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "cells_sim.v:1284"
+          }
+        },
+        "D_OUT_1": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "cells_sim.v:1285"
+          }
+        },
+        "INPUT_CLK": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:1281"
+          }
+        },
+        "LATCH_INPUT_VALUE": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:1279"
+          }
+        },
+        "OUTPUT_CLK": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:1282"
+          }
+        },
+        "OUTPUT_ENABLE": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "cells_sim.v:1283"
+          }
+        },
+        "PACKAGE_PIN": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:1278"
+          }
+        },
+        "PU_ENB": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "cells_sim.v:1288"
+          }
+        },
+        "WEAK_PU_ENB": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "cells_sim.v:1289"
+          }
+        }
+      }
+    },
+    "SB_IO_OD": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:1346"
+      },
+      "ports": {
+        "PACKAGEPIN": {
+          "direction": "inout",
+          "bits": [ 2 ]
+        },
+        "LATCHINPUTVALUE": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "CLOCKENABLE": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "INPUTCLK": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "OUTPUTCLK": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "OUTPUTENABLE": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "DOUT1": {
+          "direction": "input",
+          "bits": [ 8 ]
+        },
+        "DOUT0": {
+          "direction": "input",
+          "bits": [ 9 ]
+        },
+        "DIN1": {
+          "direction": "output",
+          "bits": [ 10 ]
+        },
+        "DIN0": {
+          "direction": "output",
+          "bits": [ 11 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "CLOCKENABLE": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:1349"
+          }
+        },
+        "DIN0": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "cells_sim.v:1356"
+          }
+        },
+        "DIN1": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "cells_sim.v:1355"
+          }
+        },
+        "DOUT0": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "cells_sim.v:1354"
+          }
+        },
+        "DOUT1": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "cells_sim.v:1353"
+          }
+        },
+        "INPUTCLK": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:1350"
+          }
+        },
+        "LATCHINPUTVALUE": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:1348"
+          }
+        },
+        "OUTPUTCLK": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:1351"
+          }
+        },
+        "OUTPUTENABLE": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "cells_sim.v:1352"
+          }
+        },
+        "PACKAGEPIN": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:1347"
+          }
+        }
+      }
+    },
+    "SB_LEDDA_IP": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:1245"
+      },
+      "ports": {
+        "LEDDCS": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "LEDDCLK": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "LEDDDAT7": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "LEDDDAT6": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "LEDDDAT5": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "LEDDDAT4": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "LEDDDAT3": {
+          "direction": "input",
+          "bits": [ 8 ]
+        },
+        "LEDDDAT2": {
+          "direction": "input",
+          "bits": [ 9 ]
+        },
+        "LEDDDAT1": {
+          "direction": "input",
+          "bits": [ 10 ]
+        },
+        "LEDDDAT0": {
+          "direction": "input",
+          "bits": [ 11 ]
+        },
+        "LEDDADDR3": {
+          "direction": "input",
+          "bits": [ 12 ]
+        },
+        "LEDDADDR2": {
+          "direction": "input",
+          "bits": [ 13 ]
+        },
+        "LEDDADDR1": {
+          "direction": "input",
+          "bits": [ 14 ]
+        },
+        "LEDDADDR0": {
+          "direction": "input",
+          "bits": [ 15 ]
+        },
+        "LEDDDEN": {
+          "direction": "input",
+          "bits": [ 16 ]
+        },
+        "LEDDEXE": {
+          "direction": "input",
+          "bits": [ 17 ]
+        },
+        "LEDDRST": {
+          "direction": "input",
+          "bits": [ 18 ]
+        },
+        "PWMOUT0": {
+          "direction": "output",
+          "bits": [ 19 ]
+        },
+        "PWMOUT1": {
+          "direction": "output",
+          "bits": [ 20 ]
+        },
+        "PWMOUT2": {
+          "direction": "output",
+          "bits": [ 21 ]
+        },
+        "LEDDON": {
+          "direction": "output",
+          "bits": [ 22 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "LEDDADDR0": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "cells_sim.v:1259"
+          }
+        },
+        "LEDDADDR1": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "cells_sim.v:1258"
+          }
+        },
+        "LEDDADDR2": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "cells_sim.v:1257"
+          }
+        },
+        "LEDDADDR3": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "cells_sim.v:1256"
+          }
+        },
+        "LEDDCLK": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:1247"
+          }
+        },
+        "LEDDCS": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:1246"
+          }
+        },
+        "LEDDDAT0": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "cells_sim.v:1255"
+          }
+        },
+        "LEDDDAT1": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "cells_sim.v:1254"
+          }
+        },
+        "LEDDDAT2": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "cells_sim.v:1253"
+          }
+        },
+        "LEDDDAT3": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "cells_sim.v:1252"
+          }
+        },
+        "LEDDDAT4": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "cells_sim.v:1251"
+          }
+        },
+        "LEDDDAT5": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:1250"
+          }
+        },
+        "LEDDDAT6": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:1249"
+          }
+        },
+        "LEDDDAT7": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:1248"
+          }
+        },
+        "LEDDDEN": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "cells_sim.v:1260"
+          }
+        },
+        "LEDDEXE": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "cells_sim.v:1261"
+          }
+        },
+        "LEDDON": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "cells_sim.v:1266"
+          }
+        },
+        "LEDDRST": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "cells_sim.v:1262"
+          }
+        },
+        "PWMOUT0": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "cells_sim.v:1263"
+          }
+        },
+        "PWMOUT1": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "cells_sim.v:1264"
+          }
+        },
+        "PWMOUT2": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "cells_sim.v:1265"
+          }
+        }
+      }
+    },
+    "SB_LED_DRV_CUR": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:1124"
+      },
+      "ports": {
+        "EN": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "LEDPU": {
+          "direction": "output",
+          "bits": [ 3 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "EN": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:1125"
+          }
+        },
+        "LEDPU": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:1126"
+          }
+        }
+      }
+    },
+    "SB_LFOSC": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:1099"
+      },
+      "ports": {
+        "CLKLFPU": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "CLKLFEN": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "CLKLF": {
+          "direction": "output",
+          "bits": [ 4 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "CLKLF": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:1102"
+          }
+        },
+        "CLKLFEN": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:1101"
+          }
+        },
+        "CLKLFPU": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:1100"
+          }
+        }
+      }
+    },
+    "SB_LUT4": {
+      "attributes": {
+        "whitebox": 1,
+        "src": "cells_sim.v:135"
+      },
+      "ports": {
+        "O": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "I0": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "I1": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "I2": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "I3": {
+          "direction": "input",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+        "$ternary$cells_sim.v:137$120": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 8
+          },
+          "attributes": {
+            "src": "cells_sim.v:137"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "B": [ "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "S": [ 6 ],
+            "Y": [ 7, 8, 9, 10, 11, 12, 13, 14 ]
+          }
+        },
+        "$ternary$cells_sim.v:138$121": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 4
+          },
+          "attributes": {
+            "src": "cells_sim.v:138"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7, 8, 9, 10 ],
+            "B": [ 11, 12, 13, 14 ],
+            "S": [ 5 ],
+            "Y": [ 15, 16, 17, 18 ]
+          }
+        },
+        "$ternary$cells_sim.v:139$122": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 2
+          },
+          "attributes": {
+            "src": "cells_sim.v:139"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 15, 16 ],
+            "B": [ 17, 18 ],
+            "S": [ 4 ],
+            "Y": [ 19, 20 ]
+          }
+        },
+        "$ternary$cells_sim.v:140$123": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": 1
+          },
+          "attributes": {
+            "src": "cells_sim.v:140"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19 ],
+            "B": [ 20 ],
+            "S": [ 3 ],
+            "Y": [ 2 ]
+          }
+        }
+      },
+      "netnames": {
+        "$ternary$cells_sim.v:137$120_Y": {
+          "hide_name": 1,
+          "bits": [ 7, 8, 9, 10, 11, 12, 13, 14 ],
+          "attributes": {
+            "src": "cells_sim.v:137"
+          }
+        },
+        "$ternary$cells_sim.v:138$121_Y": {
+          "hide_name": 1,
+          "bits": [ 15, 16, 17, 18 ],
+          "attributes": {
+            "src": "cells_sim.v:138"
+          }
+        },
+        "$ternary$cells_sim.v:139$122_Y": {
+          "hide_name": 1,
+          "bits": [ 19, 20 ],
+          "attributes": {
+            "src": "cells_sim.v:139"
+          }
+        },
+        "$ternary$cells_sim.v:140$123_Y": {
+          "hide_name": 1,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:140"
+          }
+        },
+        "I0": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:135"
+          }
+        },
+        "I1": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:135"
+          }
+        },
+        "I2": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:135"
+          }
+        },
+        "I3": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:135"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:135"
+          }
+        },
+        "s1": {
+          "hide_name": 0,
+          "bits": [ 19, 20 ],
+          "attributes": {
+            "src": "cells_sim.v:139"
+          }
+        },
+        "s2": {
+          "hide_name": 0,
+          "bits": [ 15, 16, 17, 18 ],
+          "attributes": {
+            "src": "cells_sim.v:138"
+          }
+        },
+        "s3": {
+          "hide_name": 0,
+          "bits": [ 7, 8, 9, 10, 11, 12, 13, 14 ],
+          "attributes": {
+            "src": "cells_sim.v:137"
+          }
+        }
+      }
+    },
+    "SB_MAC16": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:1410"
+      },
+      "ports": {
+        "CLK": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "CE": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "C": {
+          "direction": "input",
+          "bits": [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ]
+        },
+        "A": {
+          "direction": "input",
+          "bits": [ 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ]
+        },
+        "B": {
+          "direction": "input",
+          "bits": [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51 ]
+        },
+        "D": {
+          "direction": "input",
+          "bits": [ 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ]
+        },
+        "AHOLD": {
+          "direction": "input",
+          "bits": [ 68 ]
+        },
+        "BHOLD": {
+          "direction": "input",
+          "bits": [ 69 ]
+        },
+        "CHOLD": {
+          "direction": "input",
+          "bits": [ 70 ]
+        },
+        "DHOLD": {
+          "direction": "input",
+          "bits": [ 71 ]
+        },
+        "IRSTTOP": {
+          "direction": "input",
+          "bits": [ 72 ]
+        },
+        "IRSTBOT": {
+          "direction": "input",
+          "bits": [ 73 ]
+        },
+        "ORSTTOP": {
+          "direction": "input",
+          "bits": [ 74 ]
+        },
+        "ORSTBOT": {
+          "direction": "input",
+          "bits": [ 75 ]
+        },
+        "OLOADTOP": {
+          "direction": "input",
+          "bits": [ 76 ]
+        },
+        "OLOADBOT": {
+          "direction": "input",
+          "bits": [ 77 ]
+        },
+        "ADDSUBTOP": {
+          "direction": "input",
+          "bits": [ 78 ]
+        },
+        "ADDSUBBOT": {
+          "direction": "input",
+          "bits": [ 79 ]
+        },
+        "OHOLDTOP": {
+          "direction": "input",
+          "bits": [ 80 ]
+        },
+        "OHOLDBOT": {
+          "direction": "input",
+          "bits": [ 81 ]
+        },
+        "CI": {
+          "direction": "input",
+          "bits": [ 82 ]
+        },
+        "ACCUMCI": {
+          "direction": "input",
+          "bits": [ 83 ]
+        },
+        "SIGNEXTIN": {
+          "direction": "input",
+          "bits": [ 84 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116 ]
+        },
+        "CO": {
+          "direction": "output",
+          "bits": [ 117 ]
+        },
+        "ACCUMCO": {
+          "direction": "output",
+          "bits": [ 118 ]
+        },
+        "SIGNEXTOUT": {
+          "direction": "output",
+          "bits": [ 119 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "A": {
+          "hide_name": 0,
+          "bits": [ 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ],
+          "attributes": {
+            "src": "cells_sim.v:1412"
+          }
+        },
+        "ACCUMCI": {
+          "hide_name": 0,
+          "bits": [ 83 ],
+          "attributes": {
+            "src": "cells_sim.v:1419"
+          }
+        },
+        "ACCUMCO": {
+          "hide_name": 0,
+          "bits": [ 118 ],
+          "attributes": {
+            "src": "cells_sim.v:1421"
+          }
+        },
+        "ADDSUBBOT": {
+          "hide_name": 0,
+          "bits": [ 79 ],
+          "attributes": {
+            "src": "cells_sim.v:1417"
+          }
+        },
+        "ADDSUBTOP": {
+          "hide_name": 0,
+          "bits": [ 78 ],
+          "attributes": {
+            "src": "cells_sim.v:1417"
+          }
+        },
+        "AHOLD": {
+          "hide_name": 0,
+          "bits": [ 68 ],
+          "attributes": {
+            "src": "cells_sim.v:1413"
+          }
+        },
+        "B": {
+          "hide_name": 0,
+          "bits": [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51 ],
+          "attributes": {
+            "src": "cells_sim.v:1412"
+          }
+        },
+        "BHOLD": {
+          "hide_name": 0,
+          "bits": [ 69 ],
+          "attributes": {
+            "src": "cells_sim.v:1413"
+          }
+        },
+        "C": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ],
+          "attributes": {
+            "src": "cells_sim.v:1412"
+          }
+        },
+        "CE": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:1411"
+          }
+        },
+        "CHOLD": {
+          "hide_name": 0,
+          "bits": [ 70 ],
+          "attributes": {
+            "src": "cells_sim.v:1413"
+          }
+        },
+        "CI": {
+          "hide_name": 0,
+          "bits": [ 82 ],
+          "attributes": {
+            "src": "cells_sim.v:1419"
+          }
+        },
+        "CLK": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:1411"
+          }
+        },
+        "CO": {
+          "hide_name": 0,
+          "bits": [ 117 ],
+          "attributes": {
+            "src": "cells_sim.v:1421"
+          }
+        },
+        "D": {
+          "hide_name": 0,
+          "bits": [ 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67 ],
+          "attributes": {
+            "src": "cells_sim.v:1412"
+          }
+        },
+        "DHOLD": {
+          "hide_name": 0,
+          "bits": [ 71 ],
+          "attributes": {
+            "src": "cells_sim.v:1413"
+          }
+        },
+        "IRSTBOT": {
+          "hide_name": 0,
+          "bits": [ 73 ],
+          "attributes": {
+            "src": "cells_sim.v:1414"
+          }
+        },
+        "IRSTTOP": {
+          "hide_name": 0,
+          "bits": [ 72 ],
+          "attributes": {
+            "src": "cells_sim.v:1414"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116 ],
+          "attributes": {
+            "src": "cells_sim.v:1420"
+          }
+        },
+        "OHOLDBOT": {
+          "hide_name": 0,
+          "bits": [ 81 ],
+          "attributes": {
+            "src": "cells_sim.v:1418"
+          }
+        },
+        "OHOLDTOP": {
+          "hide_name": 0,
+          "bits": [ 80 ],
+          "attributes": {
+            "src": "cells_sim.v:1418"
+          }
+        },
+        "OLOADBOT": {
+          "hide_name": 0,
+          "bits": [ 77 ],
+          "attributes": {
+            "src": "cells_sim.v:1416"
+          }
+        },
+        "OLOADTOP": {
+          "hide_name": 0,
+          "bits": [ 76 ],
+          "attributes": {
+            "src": "cells_sim.v:1416"
+          }
+        },
+        "ORSTBOT": {
+          "hide_name": 0,
+          "bits": [ 75 ],
+          "attributes": {
+            "src": "cells_sim.v:1415"
+          }
+        },
+        "ORSTTOP": {
+          "hide_name": 0,
+          "bits": [ 74 ],
+          "attributes": {
+            "src": "cells_sim.v:1415"
+          }
+        },
+        "SIGNEXTIN": {
+          "hide_name": 0,
+          "bits": [ 84 ],
+          "attributes": {
+            "src": "cells_sim.v:1419"
+          }
+        },
+        "SIGNEXTOUT": {
+          "hide_name": 0,
+          "bits": [ 119 ],
+          "attributes": {
+            "src": "cells_sim.v:1421"
+          }
+        }
+      }
+    },
+    "SB_PLL40_2F_CORE": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:961"
+      },
+      "ports": {
+        "REFERENCECLK": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "PLLOUTCOREA": {
+          "direction": "output",
+          "bits": [ 3 ]
+        },
+        "PLLOUTGLOBALA": {
+          "direction": "output",
+          "bits": [ 4 ]
+        },
+        "PLLOUTCOREB": {
+          "direction": "output",
+          "bits": [ 5 ]
+        },
+        "PLLOUTGLOBALB": {
+          "direction": "output",
+          "bits": [ 6 ]
+        },
+        "EXTFEEDBACK": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "DYNAMICDELAY": {
+          "direction": "input",
+          "bits": [ 8, 9, 10, 11, 12, 13, 14, 15 ]
+        },
+        "LOCK": {
+          "direction": "output",
+          "bits": [ 16 ]
+        },
+        "BYPASS": {
+          "direction": "input",
+          "bits": [ 17 ]
+        },
+        "RESETB": {
+          "direction": "input",
+          "bits": [ 18 ]
+        },
+        "LATCHINPUTVALUE": {
+          "direction": "input",
+          "bits": [ 19 ]
+        },
+        "SDO": {
+          "direction": "output",
+          "bits": [ 20 ]
+        },
+        "SDI": {
+          "direction": "input",
+          "bits": [ 21 ]
+        },
+        "SCLK": {
+          "direction": "input",
+          "bits": [ 22 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "BYPASS": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "cells_sim.v:970"
+          }
+        },
+        "DYNAMICDELAY": {
+          "hide_name": 0,
+          "bits": [ 8, 9, 10, 11, 12, 13, 14, 15 ],
+          "attributes": {
+            "src": "cells_sim.v:968"
+          }
+        },
+        "EXTFEEDBACK": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "cells_sim.v:967"
+          }
+        },
+        "LATCHINPUTVALUE": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "cells_sim.v:972"
+          }
+        },
+        "LOCK": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "cells_sim.v:969"
+          }
+        },
+        "PLLOUTCOREA": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:963"
+          }
+        },
+        "PLLOUTCOREB": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:965"
+          }
+        },
+        "PLLOUTGLOBALA": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:964"
+          }
+        },
+        "PLLOUTGLOBALB": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:966"
+          }
+        },
+        "REFERENCECLK": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:962"
+          }
+        },
+        "RESETB": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "cells_sim.v:971"
+          }
+        },
+        "SCLK": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "cells_sim.v:975"
+          }
+        },
+        "SDI": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "cells_sim.v:974"
+          }
+        },
+        "SDO": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "cells_sim.v:973"
+          }
+        }
+      }
+    },
+    "SB_PLL40_2F_PAD": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:996"
+      },
+      "ports": {
+        "PACKAGEPIN": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "PLLOUTCOREA": {
+          "direction": "output",
+          "bits": [ 3 ]
+        },
+        "PLLOUTGLOBALA": {
+          "direction": "output",
+          "bits": [ 4 ]
+        },
+        "PLLOUTCOREB": {
+          "direction": "output",
+          "bits": [ 5 ]
+        },
+        "PLLOUTGLOBALB": {
+          "direction": "output",
+          "bits": [ 6 ]
+        },
+        "EXTFEEDBACK": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "DYNAMICDELAY": {
+          "direction": "input",
+          "bits": [ 8, 9, 10, 11, 12, 13, 14, 15 ]
+        },
+        "LOCK": {
+          "direction": "output",
+          "bits": [ 16 ]
+        },
+        "BYPASS": {
+          "direction": "input",
+          "bits": [ 17 ]
+        },
+        "RESETB": {
+          "direction": "input",
+          "bits": [ 18 ]
+        },
+        "LATCHINPUTVALUE": {
+          "direction": "input",
+          "bits": [ 19 ]
+        },
+        "SDO": {
+          "direction": "output",
+          "bits": [ 20 ]
+        },
+        "SDI": {
+          "direction": "input",
+          "bits": [ 21 ]
+        },
+        "SCLK": {
+          "direction": "input",
+          "bits": [ 22 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "BYPASS": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "cells_sim.v:1005"
+          }
+        },
+        "DYNAMICDELAY": {
+          "hide_name": 0,
+          "bits": [ 8, 9, 10, 11, 12, 13, 14, 15 ],
+          "attributes": {
+            "src": "cells_sim.v:1003"
+          }
+        },
+        "EXTFEEDBACK": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "cells_sim.v:1002"
+          }
+        },
+        "LATCHINPUTVALUE": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "cells_sim.v:1007"
+          }
+        },
+        "LOCK": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "cells_sim.v:1004"
+          }
+        },
+        "PACKAGEPIN": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:997"
+          }
+        },
+        "PLLOUTCOREA": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:998"
+          }
+        },
+        "PLLOUTCOREB": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:1000"
+          }
+        },
+        "PLLOUTGLOBALA": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:999"
+          }
+        },
+        "PLLOUTGLOBALB": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:1001"
+          }
+        },
+        "RESETB": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "cells_sim.v:1006"
+          }
+        },
+        "SCLK": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "cells_sim.v:1010"
+          }
+        },
+        "SDI": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "cells_sim.v:1009"
+          }
+        },
+        "SDO": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "cells_sim.v:1008"
+          }
+        }
+      }
+    },
+    "SB_PLL40_2_PAD": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:927"
+      },
+      "ports": {
+        "PACKAGEPIN": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "PLLOUTCOREA": {
+          "direction": "output",
+          "bits": [ 3 ]
+        },
+        "PLLOUTGLOBALA": {
+          "direction": "output",
+          "bits": [ 4 ]
+        },
+        "PLLOUTCOREB": {
+          "direction": "output",
+          "bits": [ 5 ]
+        },
+        "PLLOUTGLOBALB": {
+          "direction": "output",
+          "bits": [ 6 ]
+        },
+        "EXTFEEDBACK": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "DYNAMICDELAY": {
+          "direction": "input",
+          "bits": [ 8, 9, 10, 11, 12, 13, 14, 15 ]
+        },
+        "LOCK": {
+          "direction": "output",
+          "bits": [ 16 ]
+        },
+        "BYPASS": {
+          "direction": "input",
+          "bits": [ 17 ]
+        },
+        "RESETB": {
+          "direction": "input",
+          "bits": [ 18 ]
+        },
+        "LATCHINPUTVALUE": {
+          "direction": "input",
+          "bits": [ 19 ]
+        },
+        "SDO": {
+          "direction": "output",
+          "bits": [ 20 ]
+        },
+        "SDI": {
+          "direction": "input",
+          "bits": [ 21 ]
+        },
+        "SCLK": {
+          "direction": "input",
+          "bits": [ 22 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "BYPASS": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "cells_sim.v:936"
+          }
+        },
+        "DYNAMICDELAY": {
+          "hide_name": 0,
+          "bits": [ 8, 9, 10, 11, 12, 13, 14, 15 ],
+          "attributes": {
+            "src": "cells_sim.v:934"
+          }
+        },
+        "EXTFEEDBACK": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "cells_sim.v:933"
+          }
+        },
+        "LATCHINPUTVALUE": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "cells_sim.v:938"
+          }
+        },
+        "LOCK": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "cells_sim.v:935"
+          }
+        },
+        "PACKAGEPIN": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:928"
+          }
+        },
+        "PLLOUTCOREA": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:929"
+          }
+        },
+        "PLLOUTCOREB": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:931"
+          }
+        },
+        "PLLOUTGLOBALA": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:930"
+          }
+        },
+        "PLLOUTGLOBALB": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:932"
+          }
+        },
+        "RESETB": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "cells_sim.v:937"
+          }
+        },
+        "SCLK": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "cells_sim.v:941"
+          }
+        },
+        "SDI": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "cells_sim.v:940"
+          }
+        },
+        "SDO": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "cells_sim.v:939"
+          }
+        }
+      }
+    },
+    "SB_PLL40_CORE": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:865"
+      },
+      "ports": {
+        "REFERENCECLK": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "PLLOUTCORE": {
+          "direction": "output",
+          "bits": [ 3 ]
+        },
+        "PLLOUTGLOBAL": {
+          "direction": "output",
+          "bits": [ 4 ]
+        },
+        "EXTFEEDBACK": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "DYNAMICDELAY": {
+          "direction": "input",
+          "bits": [ 6, 7, 8, 9, 10, 11, 12, 13 ]
+        },
+        "LOCK": {
+          "direction": "output",
+          "bits": [ 14 ]
+        },
+        "BYPASS": {
+          "direction": "input",
+          "bits": [ 15 ]
+        },
+        "RESETB": {
+          "direction": "input",
+          "bits": [ 16 ]
+        },
+        "LATCHINPUTVALUE": {
+          "direction": "input",
+          "bits": [ 17 ]
+        },
+        "SDO": {
+          "direction": "output",
+          "bits": [ 18 ]
+        },
+        "SDI": {
+          "direction": "input",
+          "bits": [ 19 ]
+        },
+        "SCLK": {
+          "direction": "input",
+          "bits": [ 20 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "BYPASS": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "cells_sim.v:872"
+          }
+        },
+        "DYNAMICDELAY": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9, 10, 11, 12, 13 ],
+          "attributes": {
+            "src": "cells_sim.v:870"
+          }
+        },
+        "EXTFEEDBACK": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:869"
+          }
+        },
+        "LATCHINPUTVALUE": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "cells_sim.v:874"
+          }
+        },
+        "LOCK": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "cells_sim.v:871"
+          }
+        },
+        "PLLOUTCORE": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:867"
+          }
+        },
+        "PLLOUTGLOBAL": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:868"
+          }
+        },
+        "REFERENCECLK": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:866"
+          }
+        },
+        "RESETB": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "cells_sim.v:873"
+          }
+        },
+        "SCLK": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "cells_sim.v:877"
+          }
+        },
+        "SDI": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "cells_sim.v:876"
+          }
+        },
+        "SDO": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "cells_sim.v:875"
+          }
+        }
+      }
+    },
+    "SB_PLL40_PAD": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:896"
+      },
+      "ports": {
+        "PACKAGEPIN": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "PLLOUTCORE": {
+          "direction": "output",
+          "bits": [ 3 ]
+        },
+        "PLLOUTGLOBAL": {
+          "direction": "output",
+          "bits": [ 4 ]
+        },
+        "EXTFEEDBACK": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "DYNAMICDELAY": {
+          "direction": "input",
+          "bits": [ 6, 7, 8, 9, 10, 11, 12, 13 ]
+        },
+        "LOCK": {
+          "direction": "output",
+          "bits": [ 14 ]
+        },
+        "BYPASS": {
+          "direction": "input",
+          "bits": [ 15 ]
+        },
+        "RESETB": {
+          "direction": "input",
+          "bits": [ 16 ]
+        },
+        "LATCHINPUTVALUE": {
+          "direction": "input",
+          "bits": [ 17 ]
+        },
+        "SDO": {
+          "direction": "output",
+          "bits": [ 18 ]
+        },
+        "SDI": {
+          "direction": "input",
+          "bits": [ 19 ]
+        },
+        "SCLK": {
+          "direction": "input",
+          "bits": [ 20 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "BYPASS": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "cells_sim.v:903"
+          }
+        },
+        "DYNAMICDELAY": {
+          "hide_name": 0,
+          "bits": [ 6, 7, 8, 9, 10, 11, 12, 13 ],
+          "attributes": {
+            "src": "cells_sim.v:901"
+          }
+        },
+        "EXTFEEDBACK": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:900"
+          }
+        },
+        "LATCHINPUTVALUE": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "cells_sim.v:905"
+          }
+        },
+        "LOCK": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "cells_sim.v:902"
+          }
+        },
+        "PACKAGEPIN": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:897"
+          }
+        },
+        "PLLOUTCORE": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:898"
+          }
+        },
+        "PLLOUTGLOBAL": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:899"
+          }
+        },
+        "RESETB": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "cells_sim.v:904"
+          }
+        },
+        "SCLK": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "cells_sim.v:908"
+          }
+        },
+        "SDI": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "cells_sim.v:907"
+          }
+        },
+        "SDO": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "cells_sim.v:906"
+          }
+        }
+      }
+    },
+    "SB_RAM40_4K": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:436"
+      },
+      "ports": {
+        "RDATA": {
+          "direction": "output",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "RCLK": {
+          "direction": "input",
+          "bits": [ 18 ]
+        },
+        "RCLKE": {
+          "direction": "input",
+          "bits": [ 19 ]
+        },
+        "RE": {
+          "direction": "input",
+          "bits": [ 20 ]
+        },
+        "RADDR": {
+          "direction": "input",
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ]
+        },
+        "WCLK": {
+          "direction": "input",
+          "bits": [ 32 ]
+        },
+        "WCLKE": {
+          "direction": "input",
+          "bits": [ 33 ]
+        },
+        "WE": {
+          "direction": "input",
+          "bits": [ 34 ]
+        },
+        "WADDR": {
+          "direction": "input",
+          "bits": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ]
+        },
+        "MASK": {
+          "direction": "input",
+          "bits": [ 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61 ]
+        },
+        "WDATA": {
+          "direction": "input",
+          "bits": [ 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "MASK": {
+          "hide_name": 0,
+          "bits": [ 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61 ],
+          "attributes": {
+            "src": "cells_sim.v:445"
+          }
+        },
+        "RADDR": {
+          "hide_name": 0,
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ],
+          "attributes": {
+            "src": "cells_sim.v:442"
+          }
+        },
+        "RCLK": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "cells_sim.v:441"
+          }
+        },
+        "RCLKE": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "cells_sim.v:441"
+          }
+        },
+        "RDATA": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "abc9_arrival": 2146,
+            "src": "cells_sim.v:440"
+          }
+        },
+        "RE": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "cells_sim.v:441"
+          }
+        },
+        "WADDR": {
+          "hide_name": 0,
+          "bits": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ],
+          "attributes": {
+            "src": "cells_sim.v:444"
+          }
+        },
+        "WCLK": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+            "src": "cells_sim.v:443"
+          }
+        },
+        "WCLKE": {
+          "hide_name": 0,
+          "bits": [ 33 ],
+          "attributes": {
+            "src": "cells_sim.v:443"
+          }
+        },
+        "WDATA": {
+          "hide_name": 0,
+          "bits": [ 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77 ],
+          "attributes": {
+            "src": "cells_sim.v:445"
+          }
+        },
+        "WE": {
+          "hide_name": 0,
+          "bits": [ 34 ],
+          "attributes": {
+            "src": "cells_sim.v:443"
+          }
+        }
+      }
+    },
+    "SB_RAM40_4KNR": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:607"
+      },
+      "ports": {
+        "RDATA": {
+          "direction": "output",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "RCLKN": {
+          "direction": "input",
+          "bits": [ 18 ]
+        },
+        "RCLKE": {
+          "direction": "input",
+          "bits": [ 19 ]
+        },
+        "RE": {
+          "direction": "input",
+          "bits": [ 20 ]
+        },
+        "RADDR": {
+          "direction": "input",
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ]
+        },
+        "WCLK": {
+          "direction": "input",
+          "bits": [ 32 ]
+        },
+        "WCLKE": {
+          "direction": "input",
+          "bits": [ 33 ]
+        },
+        "WE": {
+          "direction": "input",
+          "bits": [ 34 ]
+        },
+        "WADDR": {
+          "direction": "input",
+          "bits": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ]
+        },
+        "MASK": {
+          "direction": "input",
+          "bits": [ 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61 ]
+        },
+        "WDATA": {
+          "direction": "input",
+          "bits": [ 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "MASK": {
+          "hide_name": 0,
+          "bits": [ 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61 ],
+          "attributes": {
+            "src": "cells_sim.v:616"
+          }
+        },
+        "RADDR": {
+          "hide_name": 0,
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ],
+          "attributes": {
+            "src": "cells_sim.v:613"
+          }
+        },
+        "RCLKE": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "cells_sim.v:612"
+          }
+        },
+        "RCLKN": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "cells_sim.v:612"
+          }
+        },
+        "RDATA": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "abc9_arrival": 2146,
+            "src": "cells_sim.v:611"
+          }
+        },
+        "RE": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "cells_sim.v:612"
+          }
+        },
+        "WADDR": {
+          "hide_name": 0,
+          "bits": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ],
+          "attributes": {
+            "src": "cells_sim.v:615"
+          }
+        },
+        "WCLK": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+            "src": "cells_sim.v:614"
+          }
+        },
+        "WCLKE": {
+          "hide_name": 0,
+          "bits": [ 33 ],
+          "attributes": {
+            "src": "cells_sim.v:614"
+          }
+        },
+        "WDATA": {
+          "hide_name": 0,
+          "bits": [ 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77 ],
+          "attributes": {
+            "src": "cells_sim.v:616"
+          }
+        },
+        "WE": {
+          "hide_name": 0,
+          "bits": [ 34 ],
+          "attributes": {
+            "src": "cells_sim.v:614"
+          }
+        }
+      }
+    },
+    "SB_RAM40_4KNRNW": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:743"
+      },
+      "ports": {
+        "RDATA": {
+          "direction": "output",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "RCLKN": {
+          "direction": "input",
+          "bits": [ 18 ]
+        },
+        "RCLKE": {
+          "direction": "input",
+          "bits": [ 19 ]
+        },
+        "RE": {
+          "direction": "input",
+          "bits": [ 20 ]
+        },
+        "RADDR": {
+          "direction": "input",
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ]
+        },
+        "WCLKN": {
+          "direction": "input",
+          "bits": [ 32 ]
+        },
+        "WCLKE": {
+          "direction": "input",
+          "bits": [ 33 ]
+        },
+        "WE": {
+          "direction": "input",
+          "bits": [ 34 ]
+        },
+        "WADDR": {
+          "direction": "input",
+          "bits": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ]
+        },
+        "MASK": {
+          "direction": "input",
+          "bits": [ 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61 ]
+        },
+        "WDATA": {
+          "direction": "input",
+          "bits": [ 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "MASK": {
+          "hide_name": 0,
+          "bits": [ 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61 ],
+          "attributes": {
+            "src": "cells_sim.v:752"
+          }
+        },
+        "RADDR": {
+          "hide_name": 0,
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ],
+          "attributes": {
+            "src": "cells_sim.v:749"
+          }
+        },
+        "RCLKE": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "cells_sim.v:748"
+          }
+        },
+        "RCLKN": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "cells_sim.v:748"
+          }
+        },
+        "RDATA": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "abc9_arrival": 2146,
+            "src": "cells_sim.v:747"
+          }
+        },
+        "RE": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "cells_sim.v:748"
+          }
+        },
+        "WADDR": {
+          "hide_name": 0,
+          "bits": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ],
+          "attributes": {
+            "src": "cells_sim.v:751"
+          }
+        },
+        "WCLKE": {
+          "hide_name": 0,
+          "bits": [ 33 ],
+          "attributes": {
+            "src": "cells_sim.v:750"
+          }
+        },
+        "WCLKN": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+            "src": "cells_sim.v:750"
+          }
+        },
+        "WDATA": {
+          "hide_name": 0,
+          "bits": [ 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77 ],
+          "attributes": {
+            "src": "cells_sim.v:752"
+          }
+        },
+        "WE": {
+          "hide_name": 0,
+          "bits": [ 34 ],
+          "attributes": {
+            "src": "cells_sim.v:750"
+          }
+        }
+      }
+    },
+    "SB_RAM40_4KNW": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:675"
+      },
+      "ports": {
+        "RDATA": {
+          "direction": "output",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "RCLK": {
+          "direction": "input",
+          "bits": [ 18 ]
+        },
+        "RCLKE": {
+          "direction": "input",
+          "bits": [ 19 ]
+        },
+        "RE": {
+          "direction": "input",
+          "bits": [ 20 ]
+        },
+        "RADDR": {
+          "direction": "input",
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ]
+        },
+        "WCLKN": {
+          "direction": "input",
+          "bits": [ 32 ]
+        },
+        "WCLKE": {
+          "direction": "input",
+          "bits": [ 33 ]
+        },
+        "WE": {
+          "direction": "input",
+          "bits": [ 34 ]
+        },
+        "WADDR": {
+          "direction": "input",
+          "bits": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ]
+        },
+        "MASK": {
+          "direction": "input",
+          "bits": [ 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61 ]
+        },
+        "WDATA": {
+          "direction": "input",
+          "bits": [ 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "MASK": {
+          "hide_name": 0,
+          "bits": [ 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61 ],
+          "attributes": {
+            "src": "cells_sim.v:684"
+          }
+        },
+        "RADDR": {
+          "hide_name": 0,
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ],
+          "attributes": {
+            "src": "cells_sim.v:681"
+          }
+        },
+        "RCLK": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "cells_sim.v:680"
+          }
+        },
+        "RCLKE": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "cells_sim.v:680"
+          }
+        },
+        "RDATA": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "abc9_arrival": 2146,
+            "src": "cells_sim.v:679"
+          }
+        },
+        "RE": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "cells_sim.v:680"
+          }
+        },
+        "WADDR": {
+          "hide_name": 0,
+          "bits": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ],
+          "attributes": {
+            "src": "cells_sim.v:683"
+          }
+        },
+        "WCLKE": {
+          "hide_name": 0,
+          "bits": [ 33 ],
+          "attributes": {
+            "src": "cells_sim.v:682"
+          }
+        },
+        "WCLKN": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+            "src": "cells_sim.v:682"
+          }
+        },
+        "WDATA": {
+          "hide_name": 0,
+          "bits": [ 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77 ],
+          "attributes": {
+            "src": "cells_sim.v:684"
+          }
+        },
+        "WE": {
+          "hide_name": 0,
+          "bits": [ 34 ],
+          "attributes": {
+            "src": "cells_sim.v:682"
+          }
+        }
+      }
+    },
+    "SB_RGBA_DRV": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:1107"
+      },
+      "ports": {
+        "CURREN": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "RGBLEDEN": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "RGB0PWM": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "RGB1PWM": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "RGB2PWM": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "RGB0": {
+          "direction": "output",
+          "bits": [ 7 ]
+        },
+        "RGB1": {
+          "direction": "output",
+          "bits": [ 8 ]
+        },
+        "RGB2": {
+          "direction": "output",
+          "bits": [ 9 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "CURREN": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:1108"
+          }
+        },
+        "RGB0": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "cells_sim.v:1113"
+          }
+        },
+        "RGB0PWM": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:1110"
+          }
+        },
+        "RGB1": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "cells_sim.v:1114"
+          }
+        },
+        "RGB1PWM": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:1111"
+          }
+        },
+        "RGB2": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "cells_sim.v:1115"
+          }
+        },
+        "RGB2PWM": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:1112"
+          }
+        },
+        "RGBLEDEN": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:1109"
+          }
+        }
+      }
+    },
+    "SB_RGB_DRV": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:1131"
+      },
+      "ports": {
+        "RGBLEDEN": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "RGB0PWM": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "RGB1PWM": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "RGB2PWM": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "RGBPU": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "RGB0": {
+          "direction": "output",
+          "bits": [ 7 ]
+        },
+        "RGB1": {
+          "direction": "output",
+          "bits": [ 8 ]
+        },
+        "RGB2": {
+          "direction": "output",
+          "bits": [ 9 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "RGB0": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "cells_sim.v:1137"
+          }
+        },
+        "RGB0PWM": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:1133"
+          }
+        },
+        "RGB1": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "cells_sim.v:1138"
+          }
+        },
+        "RGB1PWM": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:1134"
+          }
+        },
+        "RGB2": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "cells_sim.v:1139"
+          }
+        },
+        "RGB2PWM": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:1135"
+          }
+        },
+        "RGBLEDEN": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:1132"
+          }
+        },
+        "RGBPU": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:1136"
+          }
+        }
+      }
+    },
+    "SB_SPI": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:1191"
+      },
+      "ports": {
+        "SBCLKI": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "SBRWI": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "SBSTBI": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "SBADRI7": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "SBADRI6": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "SBADRI5": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "SBADRI4": {
+          "direction": "input",
+          "bits": [ 8 ]
+        },
+        "SBADRI3": {
+          "direction": "input",
+          "bits": [ 9 ]
+        },
+        "SBADRI2": {
+          "direction": "input",
+          "bits": [ 10 ]
+        },
+        "SBADRI1": {
+          "direction": "input",
+          "bits": [ 11 ]
+        },
+        "SBADRI0": {
+          "direction": "input",
+          "bits": [ 12 ]
+        },
+        "SBDATI7": {
+          "direction": "input",
+          "bits": [ 13 ]
+        },
+        "SBDATI6": {
+          "direction": "input",
+          "bits": [ 14 ]
+        },
+        "SBDATI5": {
+          "direction": "input",
+          "bits": [ 15 ]
+        },
+        "SBDATI4": {
+          "direction": "input",
+          "bits": [ 16 ]
+        },
+        "SBDATI3": {
+          "direction": "input",
+          "bits": [ 17 ]
+        },
+        "SBDATI2": {
+          "direction": "input",
+          "bits": [ 18 ]
+        },
+        "SBDATI1": {
+          "direction": "input",
+          "bits": [ 19 ]
+        },
+        "SBDATI0": {
+          "direction": "input",
+          "bits": [ 20 ]
+        },
+        "MI": {
+          "direction": "input",
+          "bits": [ 21 ]
+        },
+        "SI": {
+          "direction": "input",
+          "bits": [ 22 ]
+        },
+        "SCKI": {
+          "direction": "input",
+          "bits": [ 23 ]
+        },
+        "SCSNI": {
+          "direction": "input",
+          "bits": [ 24 ]
+        },
+        "SBDATO7": {
+          "direction": "output",
+          "bits": [ 25 ]
+        },
+        "SBDATO6": {
+          "direction": "output",
+          "bits": [ 26 ]
+        },
+        "SBDATO5": {
+          "direction": "output",
+          "bits": [ 27 ]
+        },
+        "SBDATO4": {
+          "direction": "output",
+          "bits": [ 28 ]
+        },
+        "SBDATO3": {
+          "direction": "output",
+          "bits": [ 29 ]
+        },
+        "SBDATO2": {
+          "direction": "output",
+          "bits": [ 30 ]
+        },
+        "SBDATO1": {
+          "direction": "output",
+          "bits": [ 31 ]
+        },
+        "SBDATO0": {
+          "direction": "output",
+          "bits": [ 32 ]
+        },
+        "SBACKO": {
+          "direction": "output",
+          "bits": [ 33 ]
+        },
+        "SPIIRQ": {
+          "direction": "output",
+          "bits": [ 34 ]
+        },
+        "SPIWKUP": {
+          "direction": "output",
+          "bits": [ 35 ]
+        },
+        "SO": {
+          "direction": "output",
+          "bits": [ 36 ]
+        },
+        "SOE": {
+          "direction": "output",
+          "bits": [ 37 ]
+        },
+        "MO": {
+          "direction": "output",
+          "bits": [ 38 ]
+        },
+        "MOE": {
+          "direction": "output",
+          "bits": [ 39 ]
+        },
+        "SCKO": {
+          "direction": "output",
+          "bits": [ 40 ]
+        },
+        "SCKOE": {
+          "direction": "output",
+          "bits": [ 41 ]
+        },
+        "MCSNO3": {
+          "direction": "output",
+          "bits": [ 42 ]
+        },
+        "MCSNO2": {
+          "direction": "output",
+          "bits": [ 43 ]
+        },
+        "MCSNO1": {
+          "direction": "output",
+          "bits": [ 44 ]
+        },
+        "MCSNO0": {
+          "direction": "output",
+          "bits": [ 45 ]
+        },
+        "MCSNOE3": {
+          "direction": "output",
+          "bits": [ 46 ]
+        },
+        "MCSNOE2": {
+          "direction": "output",
+          "bits": [ 47 ]
+        },
+        "MCSNOE1": {
+          "direction": "output",
+          "bits": [ 48 ]
+        },
+        "MCSNOE0": {
+          "direction": "output",
+          "bits": [ 49 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "MCSNO0": {
+          "hide_name": 0,
+          "bits": [ 45 ],
+          "attributes": {
+            "src": "cells_sim.v:1235"
+          }
+        },
+        "MCSNO1": {
+          "hide_name": 0,
+          "bits": [ 44 ],
+          "attributes": {
+            "src": "cells_sim.v:1234"
+          }
+        },
+        "MCSNO2": {
+          "hide_name": 0,
+          "bits": [ 43 ],
+          "attributes": {
+            "src": "cells_sim.v:1233"
+          }
+        },
+        "MCSNO3": {
+          "hide_name": 0,
+          "bits": [ 42 ],
+          "attributes": {
+            "src": "cells_sim.v:1232"
+          }
+        },
+        "MCSNOE0": {
+          "hide_name": 0,
+          "bits": [ 49 ],
+          "attributes": {
+            "src": "cells_sim.v:1239"
+          }
+        },
+        "MCSNOE1": {
+          "hide_name": 0,
+          "bits": [ 48 ],
+          "attributes": {
+            "src": "cells_sim.v:1238"
+          }
+        },
+        "MCSNOE2": {
+          "hide_name": 0,
+          "bits": [ 47 ],
+          "attributes": {
+            "src": "cells_sim.v:1237"
+          }
+        },
+        "MCSNOE3": {
+          "hide_name": 0,
+          "bits": [ 46 ],
+          "attributes": {
+            "src": "cells_sim.v:1236"
+          }
+        },
+        "MI": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "src": "cells_sim.v:1211"
+          }
+        },
+        "MO": {
+          "hide_name": 0,
+          "bits": [ 38 ],
+          "attributes": {
+            "src": "cells_sim.v:1228"
+          }
+        },
+        "MOE": {
+          "hide_name": 0,
+          "bits": [ 39 ],
+          "attributes": {
+            "src": "cells_sim.v:1229"
+          }
+        },
+        "SBACKO": {
+          "hide_name": 0,
+          "bits": [ 33 ],
+          "attributes": {
+            "src": "cells_sim.v:1223"
+          }
+        },
+        "SBADRI0": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "cells_sim.v:1202"
+          }
+        },
+        "SBADRI1": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "cells_sim.v:1201"
+          }
+        },
+        "SBADRI2": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "cells_sim.v:1200"
+          }
+        },
+        "SBADRI3": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "cells_sim.v:1199"
+          }
+        },
+        "SBADRI4": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "cells_sim.v:1198"
+          }
+        },
+        "SBADRI5": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "cells_sim.v:1197"
+          }
+        },
+        "SBADRI6": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "cells_sim.v:1196"
+          }
+        },
+        "SBADRI7": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "cells_sim.v:1195"
+          }
+        },
+        "SBCLKI": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:1192"
+          }
+        },
+        "SBDATI0": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "cells_sim.v:1210"
+          }
+        },
+        "SBDATI1": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "src": "cells_sim.v:1209"
+          }
+        },
+        "SBDATI2": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "cells_sim.v:1208"
+          }
+        },
+        "SBDATI3": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "cells_sim.v:1207"
+          }
+        },
+        "SBDATI4": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "cells_sim.v:1206"
+          }
+        },
+        "SBDATI5": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "cells_sim.v:1205"
+          }
+        },
+        "SBDATI6": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "cells_sim.v:1204"
+          }
+        },
+        "SBDATI7": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "cells_sim.v:1203"
+          }
+        },
+        "SBDATO0": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+            "src": "cells_sim.v:1222"
+          }
+        },
+        "SBDATO1": {
+          "hide_name": 0,
+          "bits": [ 31 ],
+          "attributes": {
+            "src": "cells_sim.v:1221"
+          }
+        },
+        "SBDATO2": {
+          "hide_name": 0,
+          "bits": [ 30 ],
+          "attributes": {
+            "src": "cells_sim.v:1220"
+          }
+        },
+        "SBDATO3": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+            "src": "cells_sim.v:1219"
+          }
+        },
+        "SBDATO4": {
+          "hide_name": 0,
+          "bits": [ 28 ],
+          "attributes": {
+            "src": "cells_sim.v:1218"
+          }
+        },
+        "SBDATO5": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "src": "cells_sim.v:1217"
+          }
+        },
+        "SBDATO6": {
+          "hide_name": 0,
+          "bits": [ 26 ],
+          "attributes": {
+            "src": "cells_sim.v:1216"
+          }
+        },
+        "SBDATO7": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "cells_sim.v:1215"
+          }
+        },
+        "SBRWI": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:1193"
+          }
+        },
+        "SBSTBI": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:1194"
+          }
+        },
+        "SCKI": {
+          "hide_name": 0,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "cells_sim.v:1213"
+          }
+        },
+        "SCKO": {
+          "hide_name": 0,
+          "bits": [ 40 ],
+          "attributes": {
+            "src": "cells_sim.v:1230"
+          }
+        },
+        "SCKOE": {
+          "hide_name": 0,
+          "bits": [ 41 ],
+          "attributes": {
+            "src": "cells_sim.v:1231"
+          }
+        },
+        "SCSNI": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "src": "cells_sim.v:1214"
+          }
+        },
+        "SI": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "src": "cells_sim.v:1212"
+          }
+        },
+        "SO": {
+          "hide_name": 0,
+          "bits": [ 36 ],
+          "attributes": {
+            "src": "cells_sim.v:1226"
+          }
+        },
+        "SOE": {
+          "hide_name": 0,
+          "bits": [ 37 ],
+          "attributes": {
+            "src": "cells_sim.v:1227"
+          }
+        },
+        "SPIIRQ": {
+          "hide_name": 0,
+          "bits": [ 34 ],
+          "attributes": {
+            "src": "cells_sim.v:1224"
+          }
+        },
+        "SPIWKUP": {
+          "hide_name": 0,
+          "bits": [ 35 ],
+          "attributes": {
+            "src": "cells_sim.v:1225"
+          }
+        }
+      }
+    },
+    "SB_SPRAM256KA": {
+      "attributes": {
+        "blackbox": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:1040"
+      },
+      "ports": {
+        "ADDRESS": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ]
+        },
+        "DATAIN": {
+          "direction": "input",
+          "bits": [ 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ]
+        },
+        "MASKWREN": {
+          "direction": "input",
+          "bits": [ 32, 33, 34, 35 ]
+        },
+        "WREN": {
+          "direction": "input",
+          "bits": [ 36 ]
+        },
+        "CHIPSELECT": {
+          "direction": "input",
+          "bits": [ 37 ]
+        },
+        "CLOCK": {
+          "direction": "input",
+          "bits": [ 38 ]
+        },
+        "STANDBY": {
+          "direction": "input",
+          "bits": [ 39 ]
+        },
+        "SLEEP": {
+          "direction": "input",
+          "bits": [ 40 ]
+        },
+        "POWEROFF": {
+          "direction": "input",
+          "bits": [ 41 ]
+        },
+        "DATAOUT": {
+          "direction": "output",
+          "bits": [ 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "ADDRESS": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
+          "attributes": {
+            "src": "cells_sim.v:1041"
+          }
+        },
+        "CHIPSELECT": {
+          "hide_name": 0,
+          "bits": [ 37 ],
+          "attributes": {
+            "src": "cells_sim.v:1044"
+          }
+        },
+        "CLOCK": {
+          "hide_name": 0,
+          "bits": [ 38 ],
+          "attributes": {
+            "src": "cells_sim.v:1044"
+          }
+        },
+        "DATAIN": {
+          "hide_name": 0,
+          "bits": [ 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ],
+          "attributes": {
+            "src": "cells_sim.v:1042"
+          }
+        },
+        "DATAOUT": {
+          "hide_name": 0,
+          "bits": [ 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57 ],
+          "attributes": {
+            "src": "cells_sim.v:1045"
+          }
+        },
+        "MASKWREN": {
+          "hide_name": 0,
+          "bits": [ 32, 33, 34, 35 ],
+          "attributes": {
+            "src": "cells_sim.v:1043"
+          }
+        },
+        "POWEROFF": {
+          "hide_name": 0,
+          "bits": [ 41 ],
+          "attributes": {
+            "src": "cells_sim.v:1044"
+          }
+        },
+        "SLEEP": {
+          "hide_name": 0,
+          "bits": [ 40 ],
+          "attributes": {
+            "src": "cells_sim.v:1044"
+          }
+        },
+        "STANDBY": {
+          "hide_name": 0,
+          "bits": [ 39 ],
+          "attributes": {
+            "src": "cells_sim.v:1044"
+          }
+        },
+        "WREN": {
+          "hide_name": 0,
+          "bits": [ 36 ],
+          "attributes": {
+            "src": "cells_sim.v:1044"
+          }
+        }
+      }
+    },
+    "SB_WARMBOOT": {
+      "attributes": {
+        "blackbox": 1,
+        "keep": 1,
+        "cells_not_processed": 1,
+        "src": "cells_sim.v:1033"
+      },
+      "ports": {
+        "BOOT": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "S1": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "S0": {
+          "direction": "input",
+          "bits": [ 4 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "BOOT": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "cells_sim.v:1034"
+          }
+        },
+        "S0": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "cells_sim.v:1036"
+          }
+        },
+        "S1": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "cells_sim.v:1035"
+          }
+        }
+      }
+    },
+    "hangman": {
+      "attributes": {
+        "top": 1,
+        "src": "hangman.sv:1"
+      },
+      "ports": {
+        "hz100": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "reset": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "flash": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "hex": {
+          "direction": "input",
+          "bits": [ 5, 6, 7, 8, 9, 10 ]
+        },
+        "ctrdisp": {
+          "direction": "output",
+          "bits": [ 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "letterdisp": {
+          "direction": "output",
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ]
+        },
+        "win": {
+          "direction": "output",
+          "bits": [ 46 ]
+        },
+        "lose": {
+          "direction": "output",
+          "bits": [ 47 ]
+        }
+      },
+      "cells": {
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1175": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111111111110000"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:46"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 10 ],
+            "I3": [ 48 ],
+            "O": [ 49 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1176": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111111111111100"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:51"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ 5 ],
+            "I2": [ 6 ],
+            "I3": [ 50 ],
+            "O": [ 48 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1177": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111111111111100"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:51"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ 7 ],
+            "I2": [ 8 ],
+            "I3": [ 9 ],
+            "O": [ 50 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1178": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0000000000001000"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 51 ],
+            "I1": [ 52 ],
+            "I2": [ 53 ],
+            "I3": [ 54 ],
+            "O": [ 55 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1179": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111111100111111"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:51"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ 56 ],
+            "I2": [ 57 ],
+            "I3": [ 58 ],
+            "O": [ 59 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1180": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0000000011110000"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:46"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 59 ],
+            "I3": [ 60 ],
+            "O": [ 61 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1181": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1000000000000000"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 62 ],
+            "I1": [ 63 ],
+            "I2": [ 64 ],
+            "I3": [ 65 ],
+            "O": [ 60 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1182": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111111111110000"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:46"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 66 ],
+            "I3": [ 67 ],
+            "O": [ 68 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1183": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1010100010101001"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 51 ],
+            "I1": [ 53 ],
+            "I2": [ 54 ],
+            "I3": [ 52 ],
+            "O": [ 67 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1184": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0000010001100100"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 53 ],
+            "I1": [ 52 ],
+            "I2": [ 54 ],
+            "I3": [ 51 ],
+            "O": [ 66 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1185": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0101010100000110"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 51 ],
+            "I1": [ 54 ],
+            "I2": [ 52 ],
+            "I3": [ 53 ],
+            "O": [ 69 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1186": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0001000000010110"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 54 ],
+            "I1": [ 51 ],
+            "I2": [ 53 ],
+            "I3": [ 52 ],
+            "O": [ 70 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1187": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111011111101001"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 53 ],
+            "I1": [ 54 ],
+            "I2": [ 51 ],
+            "I3": [ 52 ],
+            "O": [ 71 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1188": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111111111010111"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 54 ],
+            "I1": [ 53 ],
+            "I2": [ 52 ],
+            "I3": [ 51 ],
+            "O": [ 72 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1189": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111111111111101"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 52 ],
+            "I1": [ 53 ],
+            "I2": [ 54 ],
+            "I3": [ 51 ],
+            "O": [ 73 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1190": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0011000000111100"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:51"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ 51 ],
+            "I2": [ 54 ],
+            "I3": [ 53 ],
+            "O": [ 74 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1191": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111110111011101"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 53 ],
+            "I1": [ 51 ],
+            "I2": [ 52 ],
+            "I3": [ 54 ],
+            "O": [ 75 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1192": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0011000000111100"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:51"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ 51 ],
+            "I2": [ 53 ],
+            "I3": [ 54 ],
+            "O": [ 76 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1193": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0100010001010100"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 9 ],
+            "I1": [ 8 ],
+            "I2": [ 6 ],
+            "I3": [ 7 ],
+            "O": [ 77 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1194": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111111111110000"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:46"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 9 ],
+            "I3": [ 78 ],
+            "O": [ 79 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1195": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0001000100010000"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 7 ],
+            "I1": [ 8 ],
+            "I2": [ 6 ],
+            "I3": [ 5 ],
+            "O": [ 78 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1196": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0000000000001100"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:51"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ 4 ],
+            "I2": [ 60 ],
+            "I3": [ 59 ],
+            "O": [ 47 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1197": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111000000000000"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:46"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 4 ],
+            "I3": [ 60 ],
+            "O": [ 46 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1198": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111111110000010"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 80 ],
+            "I1": [ 81 ],
+            "I2": [ 68 ],
+            "I3": [ 62 ],
+            "O": [ 82 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1199": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1000000000001000"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 83 ],
+            "I1": [ 84 ],
+            "I2": [ 85 ],
+            "I3": [ 69 ],
+            "O": [ 80 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1200": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1010101010101110"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 63 ],
+            "I1": [ 86 ],
+            "I2": [ 87 ],
+            "I3": [ 88 ],
+            "O": [ 89 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1201": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1100000000001100"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:51"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ 83 ],
+            "I2": [ 84 ],
+            "I3": [ 72 ],
+            "O": [ 86 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1202": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0000111111110000"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:46"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 81 ],
+            "I3": [ 70 ],
+            "O": [ 88 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1203": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0000111111110000"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:46"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 85 ],
+            "I3": [ 71 ],
+            "O": [ 87 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1204": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1100000000001100"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:51"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ 83 ],
+            "I2": [ 85 ],
+            "I3": [ 73 ],
+            "O": [ 90 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1205": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111111110000010"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 91 ],
+            "I1": [ 81 ],
+            "I2": [ 74 ],
+            "I3": [ 65 ],
+            "O": [ 92 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1206": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1000000000001000"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 83 ],
+            "I1": [ 93 ],
+            "I2": [ 85 ],
+            "I3": [ 75 ],
+            "O": [ 91 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1207": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0101100101101001"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 84 ],
+            "I1": [ 53 ],
+            "I2": [ 51 ],
+            "I3": [ 54 ],
+            "O": [ 93 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1208": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111111100001111"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:46"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 59 ],
+            "I3": [ 62 ],
+            "O": [ 94 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1209": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111111100001111"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:46"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 59 ],
+            "I3": [ 63 ],
+            "O": [ 95 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1210": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111111100001111"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:46"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 59 ],
+            "I3": [ 64 ],
+            "O": [ 96 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1211": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111111100001111"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:46"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 59 ],
+            "I3": [ 65 ],
+            "O": [ 97 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1212": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0000000011111111"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:41"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ "0" ],
+            "I3": [ 58 ],
+            "O": [ 98 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1213": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0000000011111111"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:41"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ "0" ],
+            "I3": [ 52 ],
+            "O": [ 99 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1215": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0000000011111111"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:41"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ "0" ],
+            "I3": [ 57 ],
+            "O": [ 100 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1216": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1001000000001001"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ 66 ],
+            "I1": [ 84 ],
+            "I2": [ 67 ],
+            "I3": [ 81 ],
+            "O": [ 101 ]
+          }
+        },
+        "$abc$1174$auto$blifparse.cc:492:parse_blif$1217": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111110011001100"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "cells_map.v:51"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ 64 ],
+            "I2": [ 90 ],
+            "I3": [ 101 ],
+            "O": [ 102 ]
+          }
+        },
+        "$auto$alumacc.cc:485:replace_alu$345.slice[1].fadd.carry": {
+          "hide_name": 1,
+          "type": "SB_CARRY",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:39|arith_map.v:47|cells_map.v:68"
+          },
+          "port_directions": {
+            "CI": "input",
+            "CO": "output",
+            "I0": "input",
+            "I1": "input"
+          },
+          "connections": {
+            "CI": [ 52 ],
+            "CO": [ 103 ],
+            "I0": [ "0" ],
+            "I1": [ 54 ]
+          }
+        },
+        "$auto$alumacc.cc:485:replace_alu$345.slice[1].fadd.lut": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0110100110010110"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:39|arith_map.v:47|cells_map.v:74|cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 54 ],
+            "I3": [ 52 ],
+            "O": [ 104 ]
+          }
+        },
+        "$auto$alumacc.cc:485:replace_alu$345.slice[2].fadd.carry": {
+          "hide_name": 1,
+          "type": "SB_CARRY",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:39|arith_map.v:47|cells_map.v:68"
+          },
+          "port_directions": {
+            "CI": "input",
+            "CO": "output",
+            "I0": "input",
+            "I1": "input"
+          },
+          "connections": {
+            "CI": [ 103 ],
+            "CO": [ 105 ],
+            "I0": [ "0" ],
+            "I1": [ 53 ]
+          }
+        },
+        "$auto$alumacc.cc:485:replace_alu$345.slice[2].fadd.lut": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0110100110010110"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:39|arith_map.v:47|cells_map.v:74|cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 53 ],
+            "I3": [ 103 ],
+            "O": [ 106 ]
+          }
+        },
+        "$auto$alumacc.cc:485:replace_alu$345.slice[3].fadd.lut": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0110100110010110"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:39|arith_map.v:47|cells_map.v:74|cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 51 ],
+            "I3": [ 105 ],
+            "O": [ 107 ]
+          }
+        },
+        "$auto$alumacc.cc:485:replace_alu$348.slice[1].fadd.carry": {
+          "hide_name": 1,
+          "type": "SB_CARRY",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:46|arith_map.v:47|cells_map.v:68"
+          },
+          "port_directions": {
+            "CI": "input",
+            "CO": "output",
+            "I0": "input",
+            "I1": "input"
+          },
+          "connections": {
+            "CI": [ 58 ],
+            "CO": [ 108 ],
+            "I0": [ "0" ],
+            "I1": [ 57 ]
+          }
+        },
+        "$auto$alumacc.cc:485:replace_alu$348.slice[1].fadd.lut": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0110100110010110"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:46|arith_map.v:47|cells_map.v:74|cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 57 ],
+            "I3": [ 58 ],
+            "O": [ 109 ]
+          }
+        },
+        "$auto$alumacc.cc:485:replace_alu$348.slice[2].fadd.lut": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0110100110010110"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:46|arith_map.v:47|cells_map.v:74|cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 56 ],
+            "I3": [ 108 ],
+            "O": [ 110 ]
+          }
+        },
+        "$auto$alumacc.cc:485:replace_alu$351.slice[1].fadd.carry": {
+          "hide_name": 1,
+          "type": "SB_CARRY",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:77|arith_map.v:47|cells_map.v:68"
+          },
+          "port_directions": {
+            "CI": "input",
+            "CO": "output",
+            "I0": "input",
+            "I1": "input"
+          },
+          "connections": {
+            "CI": [ 98 ],
+            "CO": [ 111 ],
+            "I0": [ "1" ],
+            "I1": [ 100 ]
+          }
+        },
+        "$auto$alumacc.cc:485:replace_alu$351.slice[1].fadd.lut": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0110100110010110"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:77|arith_map.v:47|cells_map.v:74|cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "1" ],
+            "I2": [ 100 ],
+            "I3": [ 98 ],
+            "O": [ 112 ]
+          }
+        },
+        "$auto$alumacc.cc:485:replace_alu$351.slice[2].fadd.lut": {
+          "hide_name": 1,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1001011001101001"
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:77|arith_map.v:47|cells_map.v:74|cells_map.v:56"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "1" ],
+            "I2": [ 56 ],
+            "I3": [ 111 ],
+            "O": [ 113 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$751": {
+          "hide_name": 1,
+          "type": "SB_DFFSR",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:38|cells_map.v:2"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 3 ],
+            "D": [ 99 ],
+            "Q": [ 52 ],
+            "R": [ 55 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$752": {
+          "hide_name": 1,
+          "type": "SB_DFFSR",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:38|cells_map.v:2"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 3 ],
+            "D": [ 104 ],
+            "Q": [ 54 ],
+            "R": [ 55 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$753": {
+          "hide_name": 1,
+          "type": "SB_DFFSR",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:38|cells_map.v:2"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 3 ],
+            "D": [ 106 ],
+            "Q": [ 53 ],
+            "R": [ 55 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$754": {
+          "hide_name": 1,
+          "type": "SB_DFFSR",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:38|cells_map.v:2"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 3 ],
+            "D": [ 107 ],
+            "Q": [ 51 ],
+            "R": [ 55 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$755": {
+          "hide_name": 1,
+          "type": "SB_DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:28|cells_map.v:2"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 49 ],
+            "Q": [ 114 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$756": {
+          "hide_name": 1,
+          "type": "SB_DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:28|cells_map.v:2"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 114 ],
+            "Q": [ 115 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$757": {
+          "hide_name": 1,
+          "type": "SB_DFFSS",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:28|cells_map.v:2"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output",
+            "S": "input"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 77 ],
+            "Q": [ 81 ],
+            "S": [ 10 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$758": {
+          "hide_name": 1,
+          "type": "SB_DFFSS",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:28|cells_map.v:2"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output",
+            "S": "input"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 79 ],
+            "Q": [ 85 ],
+            "S": [ 10 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$759": {
+          "hide_name": 1,
+          "type": "SB_DFFSS",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:28|cells_map.v:2"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output",
+            "S": "input"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 50 ],
+            "Q": [ 84 ],
+            "S": [ 10 ]
+          }
+        },
+        "$auto$simplemap.cc:420:simplemap_dff$760": {
+          "hide_name": 1,
+          "type": "SB_DFFSS",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:28|cells_map.v:2"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output",
+            "S": "input"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 48 ],
+            "Q": [ 83 ],
+            "S": [ 10 ]
+          }
+        },
+        "$auto$simplemap.cc:496:simplemap_adff$744": {
+          "hide_name": 1,
+          "type": "SB_DFFER",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:48|cells_map.v:27"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 115 ],
+            "D": [ 82 ],
+            "E": [ 59 ],
+            "Q": [ 62 ],
+            "R": [ 3 ]
+          }
+        },
+        "$auto$simplemap.cc:496:simplemap_adff$745": {
+          "hide_name": 1,
+          "type": "SB_DFFER",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:48|cells_map.v:27"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 115 ],
+            "D": [ 89 ],
+            "E": [ 59 ],
+            "Q": [ 63 ],
+            "R": [ 3 ]
+          }
+        },
+        "$auto$simplemap.cc:496:simplemap_adff$746": {
+          "hide_name": 1,
+          "type": "SB_DFFER",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:48|cells_map.v:27"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 115 ],
+            "D": [ 102 ],
+            "E": [ 59 ],
+            "Q": [ 64 ],
+            "R": [ 3 ]
+          }
+        },
+        "$auto$simplemap.cc:496:simplemap_adff$747": {
+          "hide_name": 1,
+          "type": "SB_DFFER",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:48|cells_map.v:27"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 115 ],
+            "D": [ 92 ],
+            "E": [ 59 ],
+            "Q": [ 65 ],
+            "R": [ 3 ]
+          }
+        },
+        "$auto$simplemap.cc:496:simplemap_adff$748": {
+          "hide_name": 1,
+          "type": "SB_DFFER",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:42|cells_map.v:27"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 115 ],
+            "D": [ 98 ],
+            "E": [ 61 ],
+            "Q": [ 58 ],
+            "R": [ 3 ]
+          }
+        },
+        "$auto$simplemap.cc:496:simplemap_adff$749": {
+          "hide_name": 1,
+          "type": "SB_DFFER",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:42|cells_map.v:27"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 115 ],
+            "D": [ 109 ],
+            "E": [ 61 ],
+            "Q": [ 57 ],
+            "R": [ 3 ]
+          }
+        },
+        "$auto$simplemap.cc:496:simplemap_adff$750": {
+          "hide_name": 1,
+          "type": "SB_DFFER",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:42|cells_map.v:27"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "E": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 115 ],
+            "D": [ 110 ],
+            "E": [ 61 ],
+            "Q": [ 56 ],
+            "R": [ 3 ]
+          }
+        },
+        "s0": {
+          "hide_name": 0,
+          "type": "ssdec",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:73"
+          },
+          "port_directions": {
+            "enable": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "enable": [ 94 ],
+            "in": [ 68, 69, "1", "1" ],
+            "out": [ 18, 19, 20, 21, 22, 23, 24 ]
+          }
+        },
+        "s1": {
+          "hide_name": 0,
+          "type": "ssdec",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:74"
+          },
+          "port_directions": {
+            "enable": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "enable": [ 95 ],
+            "in": [ 70, 71, 72, "1" ],
+            "out": [ 25, 26, 27, 28, 29, 30, 31 ]
+          }
+        },
+        "s2": {
+          "hide_name": 0,
+          "type": "ssdec",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:75"
+          },
+          "port_directions": {
+            "enable": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "enable": [ 96 ],
+            "in": [ 67, 73, 66, "1" ],
+            "out": [ 32, 33, 34, 35, 36, 37, 38 ]
+          }
+        },
+        "s3": {
+          "hide_name": 0,
+          "type": "ssdec",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:76"
+          },
+          "port_directions": {
+            "enable": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "enable": [ 97 ],
+            "in": [ 74, 75, 76, "1" ],
+            "out": [ 39, 40, 41, 42, 43, 44, 45 ]
+          }
+        },
+        "s4": {
+          "hide_name": 0,
+          "type": "ssdec",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": 1,
+            "src": "hangman.sv:77"
+          },
+          "port_directions": {
+            "enable": "input",
+            "in": "input",
+            "out": "output"
+          },
+          "connections": {
+            "enable": [ "1" ],
+            "in": [ 58, 112, 113, "0" ],
+            "out": [ 11, 12, 13, 14, 15, 16, 17 ]
+          }
+        }
+      },
+      "netnames": {
+        "$0$mem2bits$\\words$hangman.sv:73$5[15:0]$101": {
+          "hide_name": 1,
+          "bits": [ 68, 69, "1", "1", 70, 71, 72, "1", 67, 73, 66, "1", 74, 75, 76 ],
+          "attributes": {
+          }
+        },
+        "$0\\disp_en[3:0]": {
+          "hide_name": 1,
+          "bits": [ 82, 89, 102, 92 ],
+          "attributes": {
+            "src": "hangman.sv:48"
+          }
+        },
+        "$0\\ff[1:0]": {
+          "hide_name": 1,
+          "bits": [ 49, 114 ],
+          "attributes": {
+            "src": "hangman.sv:28"
+          }
+        },
+        "$0\\state[2:0]": {
+          "hide_name": 1,
+          "bits": [ 98, 109, 110 ],
+          "attributes": {
+            "src": "hangman.sv:42"
+          }
+        },
+        "$abc$1174$add$hangman.sv:39$30_Y[0]": {
+          "hide_name": 1,
+          "bits": [ 99 ],
+          "attributes": {
+          }
+        },
+        "$abc$1174$auto$alumacc.cc:485:replace_alu$351.BB[1]": {
+          "hide_name": 1,
+          "bits": [ 100 ],
+          "attributes": {
+            "src": "hangman.sv:77|arith_map.v:42"
+          }
+        },
+        "$abc$1174$auto$dff2dffe.cc:158:make_patterns_logic$1045": {
+          "hide_name": 1,
+          "bits": [ 59 ],
+          "attributes": {
+          }
+        },
+        "$abc$1174$auto$dff2dffe.cc:158:make_patterns_logic$1069": {
+          "hide_name": 1,
+          "bits": [ 61 ],
+          "attributes": {
+          }
+        },
+        "$abc$1174$auto$simplemap.cc:127:simplemap_reduce$474[1]_new_inv_": {
+          "hide_name": 1,
+          "bits": [ 86 ],
+          "attributes": {
+          }
+        },
+        "$abc$1174$auto$simplemap.cc:127:simplemap_reduce$815[0]": {
+          "hide_name": 1,
+          "bits": [ 55 ],
+          "attributes": {
+          }
+        },
+        "$abc$1174$auto$simplemap.cc:250:simplemap_eqne$466[0]_new_": {
+          "hide_name": 1,
+          "bits": [ 88 ],
+          "attributes": {
+          }
+        },
+        "$abc$1174$auto$simplemap.cc:250:simplemap_eqne$466[1]_new_": {
+          "hide_name": 1,
+          "bits": [ 87 ],
+          "attributes": {
+          }
+        },
+        "$abc$1174$auto$simplemap.cc:250:simplemap_eqne$498[2]_new_inv_": {
+          "hide_name": 1,
+          "bits": [ 93 ],
+          "attributes": {
+          }
+        },
+        "$abc$1174$logic_not$hangman.sv:45$35_Y_new_inv_": {
+          "hide_name": 1,
+          "bits": [ 60 ],
+          "attributes": {
+            "src": "hangman.sv:45"
+          }
+        },
+        "$abc$1174$new_n101_": {
+          "hide_name": 1,
+          "bits": [ 101 ],
+          "attributes": {
+          }
+        },
+        "$abc$1174$new_n81_": {
+          "hide_name": 1,
+          "bits": [ 80 ],
+          "attributes": {
+          }
+        },
+        "$abc$1174$new_n88_": {
+          "hide_name": 1,
+          "bits": [ 90 ],
+          "attributes": {
+          }
+        },
+        "$abc$1174$new_n91_": {
+          "hide_name": 1,
+          "bits": [ 91 ],
+          "attributes": {
+          }
+        },
+        "$abc$1174$or$hangman.sv:73$92_Y": {
+          "hide_name": 1,
+          "bits": [ 94 ],
+          "attributes": {
+            "src": "hangman.sv:73"
+          }
+        },
+        "$abc$1174$or$hangman.sv:74$94_Y": {
+          "hide_name": 1,
+          "bits": [ 95 ],
+          "attributes": {
+            "src": "hangman.sv:74"
+          }
+        },
+        "$abc$1174$or$hangman.sv:75$96_Y": {
+          "hide_name": 1,
+          "bits": [ 96 ],
+          "attributes": {
+            "src": "hangman.sv:75"
+          }
+        },
+        "$abc$1174$or$hangman.sv:76$98_Y": {
+          "hide_name": 1,
+          "bits": [ 97 ],
+          "attributes": {
+            "src": "hangman.sv:76"
+          }
+        },
+        "$abc$1174$ternary$hangman.sv:35$25_Y[1]_new_": {
+          "hide_name": 1,
+          "bits": [ 78 ],
+          "attributes": {
+            "src": "hangman.sv:35"
+          }
+        },
+        "$abc$1174$ternary$hangman.sv:35$26_Y[0]": {
+          "hide_name": 1,
+          "bits": [ 77 ],
+          "attributes": {
+            "src": "hangman.sv:35"
+          }
+        },
+        "$abc$1174$ternary$hangman.sv:35$26_Y[1]": {
+          "hide_name": 1,
+          "bits": [ 79 ],
+          "attributes": {
+            "src": "hangman.sv:35"
+          }
+        },
+        "$abc$1174$ternary$hangman.sv:35$26_Y[2]": {
+          "hide_name": 1,
+          "bits": [ 50 ],
+          "attributes": {
+            "src": "hangman.sv:35"
+          }
+        },
+        "$abc$1174$ternary$hangman.sv:35$26_Y[3]": {
+          "hide_name": 1,
+          "bits": [ 48 ],
+          "attributes": {
+            "src": "hangman.sv:35"
+          }
+        },
+        "$add$hangman.sv:39$30_Y": {
+          "hide_name": 1,
+          "bits": [ 99, 104, 106, 107 ],
+          "attributes": {
+          }
+        },
+        "$auto$alumacc.cc:485:replace_alu$345.C": {
+          "hide_name": 1,
+          "bits": [ "0", 52, 103, 105 ],
+          "attributes": {
+            "src": "hangman.sv:39|arith_map.v:43"
+          }
+        },
+        "$auto$alumacc.cc:485:replace_alu$348.C": {
+          "hide_name": 1,
+          "bits": [ "0", 58, 108 ],
+          "attributes": {
+            "src": "hangman.sv:46|arith_map.v:43"
+          }
+        },
+        "$auto$alumacc.cc:485:replace_alu$351.C": {
+          "hide_name": 1,
+          "bits": [ "1", 98, 111 ],
+          "attributes": {
+            "src": "hangman.sv:77|arith_map.v:43"
+          }
+        },
+        "$sub$hangman.sv:77$99_Y": {
+          "hide_name": 1,
+          "bits": [ 58, 112, 113 ],
+          "attributes": {
+            "src": "hangman.sv:77"
+          }
+        },
+        "TRIES": {
+          "hide_name": 0,
+          "bits": [ "0", "1", "1" ],
+          "attributes": {
+            "src": "hangman.sv:10"
+          }
+        },
+        "ctrdisp": {
+          "hide_name": 0,
+          "bits": [ 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "src": "hangman.sv:4"
+          }
+        },
+        "disp_en": {
+          "hide_name": 0,
+          "bits": [ 62, 63, 64, 65 ],
+          "attributes": {
+            "src": "hangman.sv:27"
+          }
+        },
+        "ff": {
+          "hide_name": 0,
+          "bits": [ 114, 115 ],
+          "attributes": {
+            "src": "hangman.sv:25"
+          }
+        },
+        "flash": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "hangman.sv:2"
+          }
+        },
+        "hex": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8, 9, 10 ],
+          "attributes": {
+            "src": "hangman.sv:3"
+          }
+        },
+        "hex_latch": {
+          "hide_name": 0,
+          "bits": [ 81, 85, 84, 83 ],
+          "attributes": {
+            "src": "hangman.sv:26"
+          }
+        },
+        "hz100": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "hangman.sv:2"
+          }
+        },
+        "letterdisp": {
+          "hide_name": 0,
+          "bits": [ 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ],
+          "attributes": {
+            "src": "hangman.sv:5"
+          }
+        },
+        "lose": {
+          "hide_name": 0,
+          "bits": [ 47 ],
+          "attributes": {
+            "src": "hangman.sv:6"
+          }
+        },
+        "reset": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "hangman.sv:2"
+          }
+        },
+        "state": {
+          "hide_name": 0,
+          "bits": [ 58, 57, 56 ],
+          "attributes": {
+            "src": "hangman.sv:41"
+          }
+        },
+        "win": {
+          "hide_name": 0,
+          "bits": [ 46 ],
+          "attributes": {
+            "src": "hangman.sv:6"
+          }
+        },
+        "word_sel": {
+          "hide_name": 0,
+          "bits": [ 52, 54, 53, 51 ],
+          "attributes": {
+            "src": "hangman.sv:26"
+          }
+        },
+        "words[0]": {
+          "hide_name": 0,
+          "bits": [ "1", "0", "1", "1", "0", "1", "1", "1", "1", "1", "0", "1", "0", "1", "0", "1" ],
+          "attributes": {
+            "src": "hangman.sv:9"
+          }
+        },
+        "words[1]": {
+          "hide_name": 0,
+          "bits": [ "1", "0", "1", "1", "0", "1", "1", "1", "0", "0", "1", "1", "0", "1", "0", "1" ],
+          "attributes": {
+            "src": "hangman.sv:9"
+          }
+        },
+        "words[2]": {
+          "hide_name": 0,
+          "bits": [ "0", "1", "1", "1", "1", "0", "1", "1", "0", "1", "0", "1", "1", "1", "0", "1" ],
+          "attributes": {
+            "src": "hangman.sv:9"
+          }
+        },
+        "words[3]": {
+          "hide_name": 0,
+          "bits": [ "1", "0", "1", "1", "0", "1", "0", "1", "0", "1", "1", "1", "1", "1", "0", "1" ],
+          "attributes": {
+            "src": "hangman.sv:9"
+          }
+        },
+        "words[4]": {
+          "hide_name": 0,
+          "bits": [ "0", "1", "1", "1", "1", "0", "1", "1", "0", "1", "0", "1", "0", "0", "1", "1" ],
+          "attributes": {
+            "src": "hangman.sv:9"
+          }
+        },
+        "words[5]": {
+          "hide_name": 0,
+          "bits": [ "0", "1", "1", "1", "1", "1", "1", "1", "0", "1", "0", "1", "0", "0", "1", "1" ],
+          "attributes": {
+            "src": "hangman.sv:9"
+          }
+        },
+        "words[6]": {
+          "hide_name": 0,
+          "bits": [ "1", "1", "1", "1", "0", "1", "0", "1", "0", "1", "1", "1", "1", "0", "1", "1" ],
+          "attributes": {
+            "src": "hangman.sv:9"
+          }
+        },
+        "words[7]": {
+          "hide_name": 0,
+          "bits": [ "0", "1", "1", "1", "0", "0", "1", "1", "0", "1", "0", "1", "1", "1", "1", "1" ],
+          "attributes": {
+            "src": "hangman.sv:9"
+          }
+        },
+        "words[8]": {
+          "hide_name": 0,
+          "bits": [ "0", "1", "1", "1", "1", "0", "1", "1", "0", "1", "0", "1", "1", "1", "1", "1" ],
+          "attributes": {
+            "src": "hangman.sv:9"
+          }
+        },
+        "words[9]": {
+          "hide_name": 0,
+          "bits": [ "1", "0", "1", "1", "0", "1", "1", "1", "0", "1", "1", "1", "1", "1", "1", "1" ],
+          "attributes": {
+            "src": "hangman.sv:9"
+          }
+        }
+      }
+    },
+    "ssdec": {
+      "attributes": {
+        "blackbox": 1,
+        "src": "hangman.sv:82"
+      },
+      "ports": {
+        "in": {
+          "direction": "input",
+          "bits": [ 2, 3, 4, 5 ]
+        },
+        "enable": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 7, 8, 9, 10, 11, 12, 13 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "enable": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "hangman.sv:84"
+          }
+        },
+        "in": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5 ],
+          "attributes": {
+            "src": "hangman.sv:83"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 7, 8, 9, 10, 11, 12, 13 ],
+          "attributes": {
+            "src": "hangman.sv:85"
+          }
+        }
+      }
+    }
+  }
+}

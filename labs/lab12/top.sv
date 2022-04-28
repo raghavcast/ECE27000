@@ -17,28 +17,27 @@ module top (
 );
 
   // Your code goes here...
+  count8du c8_1 (.clk(hz100), .rst(reset), .enable(1'b1), .DIR(1'b0), .out(ctr), .MAX(8'd49));
+  
+   hangman hg (.hz100(hz100), .reset(pb[19]), .hex(pb[15:10]), .ctrdisp(ss7[6:0]), .letterdisp({ss3[6:0], ss2[6:0], ss1[6:0], ss0[6:0]}), .win(green), .lose(red), .flash(flash)); 
+  
   logic flash;
   logic hz1;
   logic [7:0] ctr;
   
-  count8du c8_1 (.clk(hz100), .rst(reset), .enable(1'b1), .out(ctr), .dir(1'b0), .MAX(8'd99));
-  
-  hangman hg (.hz100(hz100), .reset(pb[19]), .hex(pb[15:10]), .ctrdisp(ss7[6:0]), .letterdisp({ss3[6:0], ss2[6:0], ss1[6:0], ss0[6:0]}), .win(green), .lose(red), .flash(flash)); 
-  
-  assign flash = blue;
+  //assign blue = flash;
   
   always_ff @ (posedge hz100, posedge reset) begin
-    if (reset == 1)
+    if (reset == 1'b1)
       hz1 = 0;
-    else begin
-      hz1 = (ctr == 8'd49);  
-    end
-  end
+    else 
+      hz1 = (ctr == 8'd49);
+  end 
   
   always_ff @ (posedge hz1, posedge reset) begin
-    if (reset == 1)
-      flash = 0;
-    else 
+    if (reset == 1'b1)
+      flash = 1'b0;
+    else
       flash = ~flash;
   end
 endmodule
@@ -48,7 +47,7 @@ module count8du (
   input logic clk,
   input logic rst,
   input logic enable,
-  input logic dir,
+  input logic DIR,
   input logic [7:0] MAX,
   output reg [7:0] out
 );
@@ -63,17 +62,17 @@ module count8du (
   end   
   
   always_comb begin
-    if (dir == 1) begin
-      if (Q == MAX) 
-        next_Q = 8'd0;
-      else
-        next_Q = Q + 1;
-    end
-    else begin
-      if (Q == 8'd0)
+    if (DIR == 1'b0) begin
+      if (Q == 8'd0) 
         next_Q = MAX;
       else
         next_Q = Q - 1;
+    end
+    else begin
+      if (Q == MAX)
+        next_Q = 8'd0;
+      else
+        next_Q = Q + 1;
     end
   end
 endmodule
